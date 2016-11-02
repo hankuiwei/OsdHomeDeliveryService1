@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+        <ImageView
+            android:id="@+id/myQRCodeimg"
+            android:layout_width="@dimen/layout_308dp"
+            android:layout_height="@dimen/layout_308dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/mine_name"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/layout_20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mine_scan"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/myQRCodeimg"
+        />
+</RelativeLayout>

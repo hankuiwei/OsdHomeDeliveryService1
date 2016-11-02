@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/shape_4dpcorner_white_bg"
+	android:orientation="vertical" >
+	<TextView
+		android:layout_marginLeft="20dp"
+		android:layout_marginTop="20dp"
+		android:id="@+id/custom_default_dialog_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="22sp"
+		android:text="下线通知"
+		android:textColor="#666666"
+		android:gravity="center"
+
+		/>
+	<TextView
+	   android:layout_margin="20dp"
+		android:id="@+id/custom_default_dialog_desc"
+		android:layout_below="@id/custom_default_dialog_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="16sp"
+		android:gravity="center"
+		android:textColor="#666666"
+		android:text="你的账号在其它设备登录,请注意保障账号安全!"
+		/>
+	<LinearLayout
+		android:layout_below="@id/custom_default_dialog_desc"
+		android:id="@+id/linear_hintBtns"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/layout_70dp"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/custom_default_dialog_button_cancel"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/layout_70dp"
+			android:layout_weight="1.0"
+			android:background="@drawable/selector_bg_gray_rect_btn"
+			android:gravity="center"
+			android:text="退出应用"
+			android:textColor="@color/white_ffffff"
+			android:textSize="@dimen/text_20sp" />
+
+		<View
+			android:layout_width="@dimen/line_1dp"
+			android:layout_height="match_parent" />
+
+		<Button
+			android:id="@+id/custom_default_dialog_button_confirm"
+			android:layout_width="match_parent"
+			android:text="重新登录"
+			android:layout_height="@dimen/layout_70dp"
+			android:layout_weight="1.0"
+			android:background="@drawable/selector_bg_rect_redbtn"
+			android:gravity="center"
+			android:textColor="@color/white_ffffff"
+			android:textSize="@dimen/text_20sp" />
+	</LinearLayout>
+
+</RelativeLayout>

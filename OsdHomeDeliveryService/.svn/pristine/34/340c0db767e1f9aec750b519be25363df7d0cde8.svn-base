@@ -1,0 +1,350 @@
+[
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_unusedpart_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_unusedpart_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\eservice_launcher.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\eservice_launcher.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\shape_0dpcorner_gray_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\shape_0dpcorner_gray_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_menu.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_menu.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_usedpart_unselected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_usedpart_unselected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_qr.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_qr.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_boxorder_normal.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_boxorder_normal.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_moreinfo_machine.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_moreinfo_machine.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_unusedpart_unselected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_unusedpart_unselected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\default_load_img.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\default_load_img.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_icon_work_order_normal.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\tab_icon_work_order_normal.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_icon_spare_part_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\tab_icon_spare_part_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_backup_tools.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_backup_tools.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_icon_spare_part_normal.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\tab_icon_spare_part_normal.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_launcher.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_launcher.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_focused_holo.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_order_flow.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_order_flow.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_system_picture.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_system_picture.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_machineinfo_normal.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_machineinfo_normal.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_waiting_unselected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_waiting_unselected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_notice_relatedtech.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_notice_relatedtech.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_success_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_success_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_boxorder_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_boxorder_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_add.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_add.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\progress_circle_drawable.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\progress_circle_drawable.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_camera.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_camera.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_icon_learning_normal.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\tab_icon_learning_normal.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_clear_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_clear_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\push.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\push.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_icon_learning_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\tab_icon_learning_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_moreinfo_customer.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_moreinfo_customer.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_icon_work_order_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\tab_icon_work_order_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_machineinfo_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_machineinfo_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_opinion.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_opinion.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_icon_at_me_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\tab_icon_at_me_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_foreward.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_foreward.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_success_unselected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_success_unselected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_waiting_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_waiting_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\chrysanthemum.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\chrysanthemum.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\tab_icon_at_me_normal.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\tab_icon_at_me_normal.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_back.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_back.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_usedpart_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable-hdpi\\icon_usedpart_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    }
+]

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_4dpcorner_change_me_graypressedbg" android:state_pressed="true"></item>
+
+    <item android:drawable="@drawable/shape_4dpcorner_me_gray_bg"></item>
+</selector>

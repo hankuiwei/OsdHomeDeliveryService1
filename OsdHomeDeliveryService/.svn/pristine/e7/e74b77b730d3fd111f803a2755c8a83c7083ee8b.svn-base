@@ -1,0 +1,306 @@
+[
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_bottom_corners.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\text_bottom_corners.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_redbtn_pressed_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_redbtn_pressed_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_gray_with_corners.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\bg_gray_with_corners.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bg_redbtn.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_bg_redbtn.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_0dpcorner_white_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_0dpcorner_white_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bg_gray_rect_btn.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_bg_gray_rect_btn.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_waiting_unselected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_waiting_unselected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_drawer_itempressed_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_drawer_itempressed_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_top4dpcorner_white_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_top4dpcorner_white_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_top_corners.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\text_top_corners.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_add.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_add.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_system_picture.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_system_picture.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bg_graybtn.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_bg_graybtn.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_graybtnnormal_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_graybtnnormal_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_machineinfo_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_machineinfo_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_changepieces_graypressedbg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_changepieces_graypressedbg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_text_color_whitered.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_text_color_whitered.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_waiting_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_waiting_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\food_rating_bar_full.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\food_rating_bar_full.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_loginedit_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_loginedit_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_white_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_white_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_foreward.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_foreward.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_unusedpart_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_unusedpart_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_change_me_graypressedbg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_change_me_graypressedbg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_success_unselected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_success_unselected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_loginbtn_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_loginbtn_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_success_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_success_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_usedpart_unselected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_usedpart_unselected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bg_redwhite_checkedstate.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_bg_redwhite_checkedstate.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_drawer_itemnormal_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_drawer_itemnormal_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bg_changepieces.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_bg_changepieces.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bg_spinner.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_bg_spinner.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\item_comment_textview.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\item_comment_textview.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_graybtnpressed_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_graybtnpressed_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bg_draweritem.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_bg_draweritem.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bg_change_me.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_bg_change_me.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_unusedpart_unselected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_unusedpart_unselected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_machineinfo_normal.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_machineinfo_normal.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_camera.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_camera.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_grayspinner_pressed_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_grayspinner_pressed_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_frame_default.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\table_frame_default.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_boxorder_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_boxorder_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\table_frame_gray.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\table_frame_gray.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_change_bg_spinner.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_change_bg_spinner.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_graydash_line.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_graydash_line.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_hintright_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_hintright_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4dpcorner_hintleft_bg.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\shape_4dpcorner_hintleft_bg.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_usedpart_selected.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_usedpart_selected.png"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_radio_change.xml",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\selector_radio_change.xml"
+    },
+    {
+        "merged": "D:\\OsdHomeDeliveryService\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_boxorder_normal.png",
+        "source": "D:\\OsdHomeDeliveryService\\app\\src\\main\\res\\drawable\\icon_boxorder_normal.png"
+    }
+]

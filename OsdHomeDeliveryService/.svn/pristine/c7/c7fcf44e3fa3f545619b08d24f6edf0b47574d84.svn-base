@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_373b3e"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.lenovo.csd.eservice.activity.TechRelatedActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:background="@color/black_373b3e">
+
+        <RelativeLayout
+            android:id="@+id/relative_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_bg_draweritem"
+            android:gravity="center"
+            android:paddingLeft="@dimen/layout_25dp"
+            android:paddingRight="@dimen/layout_25dp">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/layout_15dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_toRightOf="@id/img_back"
+                android:text="@string/text_technologyinfo_related"
+                android:textColor="@color/white_ffffff"
+                android:textSize="@dimen/text_24sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/layout_55dp"-->
+    <!--android:layout_marginTop="@dimen/layout_20dp"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingLeft="@dimen/layout_25dp"-->
+    <!--android:paddingRight="@dimen/layout_25dp">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/edit_techProductSN"-->
+    <!--android:singleLine="true"-->
+    <!--android:hint="@string/text_input_sn"-->
+    <!--android:textSize="@dimen/text_18sp"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1.0"-->
+    <!--android:background="@drawable/shape_4dpcorner_gray_bg"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:paddingLeft="@dimen/layout_15dp"-->
+    <!--android:paddingRight="@dimen/layout_15dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/text_searchTxt"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="@dimen/layout_25dp"-->
+    <!--android:background="@drawable/selector_bg_redbtn"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingLeft="@dimen/layout_55dp"-->
+    <!--android:paddingRight="@dimen/layout_55dp"-->
+    <!--android:text="@string/text_search"-->
+    <!--android:textColor="@color/white_ffffff"-->
+    <!--android:textSize="@dimen/text_16sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <WebView
+        android:id="@+id/webview_infomationTechRelated"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_ffffff" />
+</LinearLayout>

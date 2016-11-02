@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:background="#373B3E">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/mine_title"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_30sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_20dp"
+                android:layout_marginEnd="@dimen/layout_25dp"
+                android:layout_marginLeft="@dimen/layout_20dp"
+                android:layout_marginRight="@dimen/layout_25dp"
+                android:layout_marginStart="@dimen/layout_20dp"
+                android:layout_marginTop="@dimen/layout_15dp">
+
+                <LinearLayout
+                    android:id="@+id/mineHeadLin"
+                    android:layout_width="@dimen/layout_101dp"
+                    android:layout_height="@dimen/layout_101dp"
+                    android:orientation="vertical">
+
+                    <com.lenovo.csd.eservice.widget.CircleImageView
+                        android:id="@+id/mineHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/default_load_img"
+                        app:border_color="#dddddd"
+                        app:border_width="1px" />
+                </LinearLayout>
+
+                <!--android:border_width="2dp"
+                    android:border_color="@color/gray_cccccc" -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/layout_20dp"
+                    android:layout_marginStart="@dimen/layout_20dp"
+                    android:layout_toEndOf="@id/mineHeadLin"
+                    android:layout_toRightOf="@id/mineHeadLin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mineName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mine_name"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/text_23sp" />
+
+                    <TextView
+                        android:id="@+id/minePositionName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mine_job"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/text_18sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/mineQRCode"
+                    android:layout_width="@dimen/layout_60dp"
+                    android:layout_height="@dimen/layout_60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_qr" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <RelativeLayout
+                android:id="@+id/mineCommentRel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_change_me"
+                android:paddingBottom="@dimen/layout_25dp"
+                android:paddingEnd="@dimen/layout_25dp"
+                android:paddingLeft="@dimen/layout_49dp"
+                android:paddingRight="@dimen/layout_25dp"
+                android:paddingStart="@dimen/layout_49dp"
+                android:paddingTop="@dimen/layout_25dp">
+
+                <ImageView
+                    android:id="@+id/mineCommentImg"
+                    android:layout_width="@dimen/layout_18dp"
+                    android:layout_height="@dimen/layout_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/layout_10dp"
+                    android:layout_marginRight="@dimen/layout_10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_at_me_comment_notes" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/mineCommentImg"
+                    android:text="@string/mine_Comment_notes"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_18sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/layout_10dp"
+                    android:layout_height="@dimen/layout_15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_foreward" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <RelativeLayout
+                android:id="@+id/mineAppendixRel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_change_me"
+                android:paddingBottom="@dimen/layout_25dp"
+                android:paddingEnd="@dimen/layout_25dp"
+                android:paddingLeft="@dimen/layout_49dp"
+                android:paddingRight="@dimen/layout_25dp"
+                android:paddingStart="@dimen/layout_49dp"
+                android:paddingTop="@dimen/layout_25dp">
+
+                <ImageView
+                    android:id="@+id/mineAppendixImg"
+                    android:layout_width="@dimen/layout_18dp"
+                    android:layout_height="@dimen/layout_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/layout_10dp"
+                    android:layout_marginRight="@dimen/layout_10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_at_me_appendix" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/mineAppendixImg"
+                    android:layout_toRightOf="@id/mineAppendixImg"
+                    android:text="@string/mine_appendix"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_18sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/layout_10dp"
+                    android:layout_height="@dimen/layout_15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_foreward" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+            <RelativeLayout
+                android:id="@+id/myTools"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_change_me"
+                android:paddingBottom="@dimen/layout_25dp"
+                android:paddingEnd="@dimen/layout_25dp"
+                android:paddingLeft="@dimen/layout_49dp"
+                android:paddingRight="@dimen/layout_25dp"
+                android:paddingStart="@dimen/layout_49dp"
+                android:paddingTop="@dimen/layout_25dp">
+
+                <ImageView
+                    android:id="@+id/imgTools"
+                    android:layout_width="@dimen/layout_18dp"
+                    android:layout_height="@dimen/layout_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/layout_10dp"
+                    android:layout_marginRight="@dimen/layout_10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_tool_box" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/imgTools"
+                    android:layout_toRightOf="@id/imgTools"
+                    android:text="@string/text_tools"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_18sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/layout_10dp"
+                    android:layout_height="@dimen/layout_15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_foreward" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+            <RelativeLayout
+                android:id="@+id/mineSettingRel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_change_me"
+                android:paddingBottom="@dimen/layout_25dp"
+                android:paddingEnd="@dimen/layout_25dp"
+                android:paddingLeft="@dimen/layout_49dp"
+                android:paddingRight="@dimen/layout_25dp"
+                android:paddingStart="@dimen/layout_49dp"
+                android:paddingTop="@dimen/layout_25dp">
+
+                <ImageView
+                    android:id="@+id/mineSettingImg"
+                    android:layout_width="@dimen/layout_18dp"
+                    android:layout_height="@dimen/layout_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/layout_10dp"
+                    android:layout_marginRight="@dimen/layout_10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_at_me_setting" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/mineSettingImg"
+                    android:layout_toRightOf="@id/mineSettingImg"
+                    android:text="@string/mine_setting"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_18sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/layout_10dp"
+                    android:layout_height="@dimen/layout_15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_foreward" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <RelativeLayout
+                android:id="@+id/mineFeedbackRel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_change_me"
+                android:paddingBottom="@dimen/layout_25dp"
+                android:paddingEnd="@dimen/layout_25dp"
+                android:paddingLeft="@dimen/layout_49dp"
+                android:paddingRight="@dimen/layout_25dp"
+                android:paddingStart="@dimen/layout_49dp"
+                android:paddingTop="@dimen/layout_25dp">
+
+                <ImageView
+                    android:id="@+id/mineFeedbackImg"
+                    android:layout_width="@dimen/layout_18dp"
+                    android:layout_height="@dimen/layout_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/layout_10dp"
+                    android:layout_marginRight="@dimen/layout_10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_opinion" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/mineFeedbackImg"
+                    android:layout_toRightOf="@id/mineFeedbackImg"
+                    android:text="@string/mine_Feedback"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_18sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/layout_10dp"
+                    android:layout_height="@dimen/layout_15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_foreward" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <RelativeLayout
+                android:id="@+id/mineAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_change_me"
+                android:paddingBottom="@dimen/layout_25dp"
+                android:paddingEnd="@dimen/layout_25dp"
+                android:paddingLeft="@dimen/layout_49dp"
+                android:paddingRight="@dimen/layout_25dp"
+                android:paddingStart="@dimen/layout_49dp"
+                android:paddingTop="@dimen/layout_25dp">
+
+                <ImageView
+                    android:id="@+id/imageAbout"
+                    android:layout_width="@dimen/layout_18dp"
+                    android:layout_height="@dimen/layout_18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/layout_10dp"
+                    android:layout_marginRight="@dimen/layout_10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_success_unselected" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/imageAbout"
+                    android:layout_toRightOf="@id/imageAbout"
+                    android:text="@string/text_about"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_18sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/layout_10dp"
+                    android:layout_height="@dimen/layout_15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_foreward" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <Button
+                android:id="@+id/mineExitBtn"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/layout_65dp"
+                android:layout_marginLeft="@dimen/layout_25dp"
+                android:layout_marginRight="@dimen/layout_25dp"
+                android:layout_marginTop="@dimen/layout_49dp"
+                android:background="@drawable/selector_bg_redbtn"
+                android:text="@string/mine_exit"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_24sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

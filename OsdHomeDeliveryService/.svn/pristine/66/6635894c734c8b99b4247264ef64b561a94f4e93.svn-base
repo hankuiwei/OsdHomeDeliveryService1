@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_373b3e"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_373b3e">
+
+
+        <RelativeLayout
+            android:id="@+id/relative_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_bg_draweritem"
+            android:gravity="center"
+            android:paddingBottom="@dimen/layout_25dp"
+            android:paddingLeft="@dimen/layout_25dp"
+            android:paddingRight="@dimen/layout_25dp"
+            android:paddingTop="@dimen/layout_15dp">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/layout_15dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_13dp"
+                android:layout_toRightOf="@id/img_back"
+                android:text="@string/text_backup_pieces"
+                android:textColor="@color/white_ffffff"
+                android:textSize="@dimen/text_24sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_ffffff">
+
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activity.OrderAttachmentActivity">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_AttachmentList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/linear_addPieces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_25dp"
+                android:background="@drawable/selector_bg_changepieces"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/layout_25dp">
+
+                <ImageView
+                    android:layout_width="@dimen/layout_18dp"
+                    android:layout_height="@dimen/layout_18dp"
+                    android:background="@drawable/icon_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_10dp"
+                    android:text="@string/text_add_backup_pieces"
+                    android:textColor="@color/gray_A8A8A8"
+                    android:textSize="@dimen/text_24sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

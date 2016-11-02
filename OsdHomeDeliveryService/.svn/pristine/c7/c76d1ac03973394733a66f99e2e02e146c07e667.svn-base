@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="red">#ff2d4b</color>
+    <color name="custom_line">#c8cacc</color>
+    <color name="white">#fff</color>
+    <color name="gray_transparent">#33666666</color>
+
+    <color name="comment_text_yellow">#FFEE00</color>
+
+
+    <color name="black_373b3e">#373B3E</color>
+    <color name="black_4b4f52">#4B4F52</color>
+    <color name="white_ffffff">#FFFFFF</color>
+    <color name="gray_cccccc">#CCCCCC</color>
+    <color name="gray_999999">#999999</color>
+    <color name="red_e1524c">#E1524C</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_F7F7F7">#F7F7F7</color>
+    <color name="gray_F8F8F8">#F8F8F8</color>
+    <color name="red_E47B78">#E47B78</color>
+    <color name="gray_A8A8A8">#A8A8A8</color>
+    <color name="gray_99A1B3">#99A1B3</color>
+    <color name="gray_898989">#898989</color>
+    <color name="gray_EEEEEE">#EEEEEE</color>
+    <color name="gray_e5e5e5">#E5E5E5</color>
+    <color name="color_F4F4F4">#F4F4F4</color>
+    <!--orders text backcolor-->
+    <color name="color_ED9794">#ED9794</color>
+    <color name="color_FFBA00">#FFBA00</color>
+    <color name="color_98D89B">#98D89B</color>
+    <color name="color_7ED5DD">#7ED5DD</color>
+    <color name="color_B6C7EE">#B6C7EE</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_E27C77">#E27C77</color>
+    <color name="color_bg_selected">#e0301e</color>
+    <color name="color_bg_normal">#e7e7e8</color>
+
+
+
+</resources>

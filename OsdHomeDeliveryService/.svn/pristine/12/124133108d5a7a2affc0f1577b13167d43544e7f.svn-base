@@ -1,0 +1,299 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/black_373b3e">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/layout_15dp"
+        android:paddingBottom="@dimen/layout_25dp"
+        android:background="#373B3E">
+        <LinearLayout
+            android:id="@+id/mine_title_Lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_25dp"
+            android:layout_marginStart="@dimen/layout_25dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/layout_15dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:src="@drawable/icon_back"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingEnd="0dp"
+                android:paddingLeft="@dimen/layout_10dp"
+                android:paddingRight="0dp"
+                android:paddingStart="@dimen/layout_10dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/mine_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_23sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/mine_Comment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_30sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#E1524C"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/layout_40dp"
+        android:paddingEnd="@dimen/layout_79dp"
+        android:paddingLeft="@dimen/layout_92dp"
+        android:paddingRight="@dimen/layout_79dp"
+        android:paddingStart="@dimen/layout_92dp"
+        android:paddingTop="@dimen/layout_40dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/layout_30dp"
+                    android:layout_height="@dimen/layout_30dp"
+                    android:src="@drawable/icon_at_me_comment_history"
+                    android:layout_marginRight="@dimen/layout_18dp"
+                    android:layout_marginEnd="@dimen/layout_18dp"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_history"
+                    android:textColor="#F4F4F4"
+                    android:textSize="@dimen/text_23sp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_good"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_15sp" />
+
+                <TextView
+                    android:id="@+id/Mine_h_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/comment_text_yellow"
+                    android:textSize="@dimen/text_15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_middle"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_15sp" />
+
+                <TextView
+                    android:id="@+id/Mine_h_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/comment_text_yellow"
+                    android:textSize="@dimen/text_15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_bad"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_15sp" />
+
+                <TextView
+                    android:id="@+id/Mine_h_bad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/comment_text_yellow"
+                    android:textSize="@dimen/text_15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_15dp"
+                android:layout_marginStart="@dimen/layout_15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/layout_30dp"
+                        android:layout_height="@dimen/layout_30dp"
+                        android:src="@drawable/ic_this_month"
+                        android:layout_marginRight="@dimen/layout_18dp"
+                        android:layout_marginEnd="@dimen/layout_18dp"
+                        android:layout_gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mine_this_month"
+                        android:textColor="#F4F4F4"
+                        android:textSize="@dimen/text_23sp"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mine_good"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <TextView
+                        android:id="@+id/Mine_good"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/comment_text_yellow"
+                        android:textSize="@dimen/text_15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mine_middle"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <TextView
+                        android:id="@+id/Mine_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/comment_text_yellow"
+                        android:textSize="@dimen/text_15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mine_bad"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <TextView
+                        android:id="@+id/Mine_bad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/comment_text_yellow"
+                        android:textSize="@dimen/text_15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_rate_comment"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_15sp" />
+
+                <TextView
+                    android:id="@+id/mine_rate_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/comment_text_yellow"
+                    android:textSize="@dimen/text_15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/layout_15dp"
+        android:paddingBottom="@dimen/layout_15dp"
+        android:background="#F4F4F4"
+        android:paddingLeft="@dimen/layout_25dp"
+        android:paddingStart="@dimen/layout_25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/mine_Comment_week"
+            android:textSize="@dimen/text_18sp" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/Mine_CommentList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:background="@color/white"/>
+
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="220dip"
+        android:layout_height="230dip"
+        android:orientation="horizontal"
+        android:padding="15dip" >
+
+<!-- 小熊骑车        
+<ImageView
+            android:id="@+id/loading_img"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/loading_ride" /> -->
+        <ProgressBar
+            android:id="@+id/loading_img"
+	        android:layout_width="29dp"
+	        android:layout_height="29dp"
+	        android:layout_centerInParent="true"
+	        android:indeterminateDuration="3000"
+	        android:indeterminateDrawable="@drawable/progress_circle_drawable"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Loading"
+			android:layout_below="@id/loading_img"
+			android:layout_marginTop="5dp"
+			android:layout_centerHorizontal="true"
+			/>
+        
+        <!--  <ImageView
+            android:id="@+id/loading_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/progrss_load" /> -->
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="@dimen/layout_25dp"
+    android:paddingRight="@dimen/layout_25dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/text_repairTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/gray_666666"
+        android:textSize="12dp" />
+
+    <TableLayout
+        android:id="@+id/tableParents"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_cccccc"
+        android:orientation="vertical">
+
+        <TableRow
+            android:id="@+id/tableRowName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1px"
+            android:background="@color/gray_F8F8F8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/text_describ"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+            <TextView
+                android:id="@+id/text_keepRepairDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="3"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1px"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_keeprepair_starttime"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+            <TextView
+                android:id="@+id/text_keepRepairStartTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="3"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1px"
+            android:background="@color/gray_F8F8F8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp"
+                android:text="@string/text_ensurence_endtime"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+            <LinearLayout
+                android:id="@+id/linear_customerAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp">
+
+
+                <TextView
+                    android:id="@+id/text_keepRepairEndTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_15sp" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1px"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp"
+                android:text="@string/text_getdoor_starttime"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+            <TextView
+                android:id="@+id/text_getDoorStartTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="3"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/text_15sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRepairDeadLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1px"
+            android:background="@color/gray_F8F8F8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/text_getdoor_endtime"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+            <TextView
+                android:id="@+id/text_getDoorEndTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="3"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

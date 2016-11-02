@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/black_373b3e"
+    tools:context="com.lenovo.csd.eservice.activity.BaseActivity">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#373B3E">
+        <LinearLayout
+            android:id="@+id/collect_Lin"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_70dp"
+            android:layout_marginLeft="@dimen/layout_25dp"
+            android:layout_marginStart="@dimen/layout_25dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/layout_15dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:src="@drawable/icon_back"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingEnd="0dp"
+                android:paddingLeft="@dimen/layout_10dp"
+                android:paddingRight="0dp"
+                android:paddingStart="@dimen/layout_10dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/collect"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_23sp" />
+        </LinearLayout>
+    </RelativeLayout>
+        <WebView
+            android:id="@+id/webVCollect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</LinearLayout>

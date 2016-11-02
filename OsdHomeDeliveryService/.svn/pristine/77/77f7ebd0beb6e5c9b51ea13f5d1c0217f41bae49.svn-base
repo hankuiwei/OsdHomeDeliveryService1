@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tip_times">
+        <item>不提醒</item>
+        <item>提前30分钟提醒</item>
+        <item>提前45分钟提醒</item>
+        <item>提前1小时提醒</item>
+        <item>提前2小时提醒</item>
+    </string-array>
+    <string-array name="contact_result">
+        <item>与预约时间一致</item>
+        <item>当前日期的其他时间点</item>
+        <item>其他日期</item>
+        <item>自行解决</item>
+        <item>失败</item>
+    </string-array>
+    <string-array name="contact_result_code">
+        <item>12289</item>
+        <item>10701</item>
+        <item>10702</item>
+        <item>12292</item>
+        <item>12293</item>
+    </string-array>
+</resources>

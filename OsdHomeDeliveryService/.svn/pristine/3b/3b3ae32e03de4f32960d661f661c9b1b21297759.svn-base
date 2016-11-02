@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eservice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.lenovo.csd.eservice.widget.HomeTabView
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#373B3E"
+        eservice:item_padding="10dp"
+        eservice:icon_size="18dp"
+        eservice:text_normal_color="#999999"
+        eservice:text_select_color="#FFFFFF"
+        eservice:text_size="11sp" />
+
+    <View
+        android:id="@+id/bottom_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/bottom_bar"
+        android:background="@color/custom_line" />
+
+    <com.lenovo.csd.eservice.widget.HomeViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar"
+        android:layout_alignParentTop="true" />
+    <!--
+         <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar_divider"
+        android:layout_alignParentTop="true" />
+    -->
+
+</RelativeLayout>

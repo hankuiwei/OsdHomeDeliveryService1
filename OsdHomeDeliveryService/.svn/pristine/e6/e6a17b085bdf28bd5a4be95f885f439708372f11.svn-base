@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/simple_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/layout_25dp"
+        android:paddingEnd="0dp"
+        android:paddingLeft="@dimen/layout_25dp"
+        android:paddingRight="0dp"
+        android:paddingStart="@dimen/layout_25dp"
+        android:paddingTop="@dimen/layout_25dp">
+
+        <LinearLayout
+            android:layout_width="@dimen/layout_75dp"
+            android:layout_height="@dimen/layout_75dp"
+            android:orientation="vertical">
+
+            <com.lenovo.csd.eservice.widget.CircleImageView
+                android:id="@+id/comment_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:border_color="@color/gray_cccccc"
+                app:border_width="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/layout_25dp"
+            android:layout_marginStart="@dimen/layout_25dp"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/comment_stars"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_15dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3" />
+
+            <LinearLayout
+                android:id="@+id/comment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_5dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/Comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:text="@string/mine_Comment_text"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/comment_line"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_20dp"
+        android:background="#F4F4F4"
+        android:orientation="horizontal" />
+</LinearLayout>

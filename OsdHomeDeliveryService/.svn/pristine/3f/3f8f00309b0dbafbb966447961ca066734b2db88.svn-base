@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_bg_change_me"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/layout_30dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/layout_25dp"
+        android:paddingRight="@dimen/layout_25dp">
+
+        <TextView
+            android:id="@+id/txtId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.4"
+            android:text="@string/orders_id"
+            android:textStyle="bold"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_20sp" />
+
+        <TextView
+            android:id="@+id/txtPreTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.1"
+            android:text="@string/orders_time"
+            android:textColor="#cccccc"
+            android:textSize="@dimen/text_15sp" />
+
+        <TextView
+            android:id="@+id/txtState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="@string/orders_state"
+            android:textColor="@color/red_E47B78"
+            android:textSize="@dimen/text_15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_7dp"
+        android:paddingLeft="@dimen/layout_25dp"
+        android:paddingRight="@dimen/layout_25dp">
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/orders_grade"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_18sp" />
+
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="@dimen/layout_10dp"
+            android:layout_height="@dimen/layout_15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_foreward" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLebel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/layout_20dp"
+        android:paddingLeft="@dimen/layout_25dp"
+        android:paddingRight="@dimen/layout_25dp" />
+
+    <include
+        android:id="@+id/includePulbicTable"
+        layout="@layout/public_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linearLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_20dp"
+        android:layout_marginTop="@dimen/layout_42dp"
+        android:background="#F4F4F4"
+        android:orientation="horizontal" />
+</LinearLayout>

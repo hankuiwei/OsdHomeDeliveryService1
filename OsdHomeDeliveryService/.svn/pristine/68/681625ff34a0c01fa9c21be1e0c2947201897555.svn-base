@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout
+        android:id="@+id/view_orderTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layout_25dp"
+        android:layout_marginRight="@dimen/layout_25dp"
+        android:layout_marginTop="@dimen/layout_30dp"
+        android:background="@drawable/table_frame_default"
+        android:orientation="vertical">
+
+        <TableRow
+            android:id="@+id/tableRowName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0.5dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginStart="0.5dp"
+            android:layout_marginTop="0.5dp"
+            android:orientation="horizontal">
+            <!-- android:background="@color/gray_F8F8F8"-->
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/orders_Customer_name_label"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+            <TextView
+                android:id="@+id/txTName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="3"
+                android:text="@string/orders_Customer_name"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_cccccc" />
+
+        <TableRow
+            android:id="@+id/tableRowTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0.5dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginStart="0.5dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="0.97"
+                android:gravity="center"
+                android:text="@string/orders_Customer_phone_label"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+            <!--
+             <LinearLayout
+                android:id="@+id/relativePhones"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.08"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/layout_15dp"
+                android:paddingRight="@dimen/layout_15dp"
+                />
+            -->
+
+            <LinearLayout
+                android:id="@+id/relativePhones"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.0"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/layout_15dp"
+                android:paddingRight="@dimen/layout_15dp"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp"
+                android:paddingLeft="@dimen/layout_10dp"
+                android:paddingStart="@dimen/layout_10dp"
+                android:background="@drawable/selector_bg_change_me"
+                >
+                <TextView
+                    android:id="@+id/txtPhones"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7.5"
+                    android:text="@string/orders_Customer_phone"
+                    android:textColor="#666666"
+                    android:paddingRight="@dimen/layout_5dp"
+                    android:paddingEnd="@dimen/layout_5dp"
+                    android:textSize="@dimen/text_15sp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_weight="0.5"
+                    android:contentDescription="@string/mine_name"
+                    android:src="@drawable/icon_orders_unfinished_phone" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <LinearLayout
+            android:id="@+id/tableRowAddress_topLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_cccccc"
+            android:orientation="horizontal" />
+
+        <TableRow
+            android:id="@+id/tableRowAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0.5dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginStart="0.5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp"
+                android:text="@string/orders_Customer_address_label"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+            <LinearLayout
+                android:id="@+id/linear_customerAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp">
+
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:text="@string/orders_Customer_address"
+                    android:textColor="#666666"
+                    android:paddingRight="@dimen/layout_5dp"
+                    android:paddingEnd="@dimen/layout_5dp"
+                    android:textSize="@dimen/text_15sp" />
+
+                <ImageView
+                    android:id="@+id/imgNavigation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginEnd="@dimen/layout_15dp"
+                    android:layout_marginRight="@dimen/layout_15dp"
+                    android:layout_toEndOf="@id/txtAddress"
+                    android:layout_toRightOf="@id/txtAddress"
+                    android:layout_weight="0.5"
+                    android:contentDescription="@string/mine_name"
+                    android:src="@drawable/icon_orders_unfinished_navigation" />
+            </LinearLayout>
+        </TableRow>
+
+        <LinearLayout
+            android:id="@+id/tableRowProduct_topLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_cccccc"
+            android:orientation="horizontal" />
+
+        <TableRow
+            android:id="@+id/tableRowProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0.5dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginStart="0.5dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp"
+                android:text="@string/orders_Customer_machine_label"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+            <TextView
+                android:id="@+id/txtProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_weight="3"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp"
+                android:text="@string/orders_Customer_machine"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/text_15sp" />
+
+        </TableRow>
+
+        <LinearLayout
+            android:id="@+id/tablePieces_topLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_cccccc"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <TableRow
+            android:id="@+id/tableRowParts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0.5dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginStart="0.5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp"
+                android:text="@string/orders_Customer_spareParts_label"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+            <LinearLayout
+                android:id="@+id/relative_backUpPieces"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_13dp"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_marginTop="@dimen/layout_13dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <!--  <TextView
+                      android:id="@+id/Txtparts"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:text="@string/orders_Customer_spareParts"
+                      android:textColor="#666666"
+                      android:textSize="10sp" />-->
+            </LinearLayout>
+        </TableRow>
+
+        <LinearLayout
+            android:id="@+id/tableRowFailure_topLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_cccccc"
+            android:orientation="horizontal" />
+
+        <TableRow
+            android:id="@+id/tableRowFailure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.5dp"
+            android:layout_marginEnd="0.5dp"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_marginStart="0.5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp"
+                android:text="@string/orders_Customer_fault_label"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+
+            <LinearLayout
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_cccccc" />
+
+
+            <TextView
+                android:id="@+id/txtFailure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_marginStart="@dimen/layout_10dp"
+                android:layout_weight="3"
+                android:paddingBottom="@dimen/layout_13dp"
+                android:paddingTop="@dimen/layout_13dp"
+                android:text="@string/orders_Customer_fault"
+                android:textColor="#666666"
+                android:textSize="@dimen/text_15sp" />
+        </TableRow>
+    </TableLayout>
+</merge>

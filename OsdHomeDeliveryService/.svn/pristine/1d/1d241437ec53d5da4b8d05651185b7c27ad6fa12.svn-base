@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_373b3e"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.lenovo.csd.eservice.activity.MyAttachments">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:background="@color/black_373b3e">
+
+        <RelativeLayout
+            android:id="@+id/relative_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_bg_draweritem"
+            android:gravity="center"
+            android:paddingLeft="@dimen/layout_25dp"
+            android:paddingRight="@dimen/layout_25dp">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/layout_15dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_13dp"
+                android:layout_toRightOf="@id/img_back"
+                android:text="@string/text_mine"
+                android:textColor="@color/white_ffffff"
+                android:textSize="@dimen/text_24sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="@string/mine_appendix"
+            android:textColor="@color/white_ffffff"
+            android:textSize="@dimen/text_30sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_70dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/orders_unfinished_bg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_unUploadAttachLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_2dp"
+                    android:background="@color/red_E47B78" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_unUploadTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_unUploadAttach"
+                        android:layout_width="@dimen/layout_18dp"
+                        android:layout_height="@dimen/layout_18dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_waiting_selected" />
+
+                    <TextView
+                        android:id="@+id/text_unUploadAttach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/layout_10dp"
+                        android:layout_toRightOf="@id/img_unUploadAttach"
+                        android:text="@string/text_unupload_attachment"
+                        android:textColor="@color/red_E47B78"
+                        android:textSize="@dimen/text_20sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/orders_finished_bg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_uploadAttachLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_2dp"
+                    android:background="@color/gray_cccccc" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_uploadTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_0dpcorner_gray_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_uploadAttach"
+                        android:layout_width="@dimen/layout_18dp"
+                        android:layout_height="@dimen/layout_18dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_success_unselected" />
+
+                    <TextView
+                        android:id="@+id/text_uploadAttach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/layout_10dp"
+                        android:layout_toRightOf="@id/img_uploadAttach"
+                        android:text="@string/text_upload_attachments"
+                        android:textColor="@color/gray_cccccc"
+                        android:textSize="@dimen/text_20sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager_myAttachments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</LinearLayout>

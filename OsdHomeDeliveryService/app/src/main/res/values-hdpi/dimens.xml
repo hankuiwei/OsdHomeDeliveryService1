@@ -1,0 +1,57 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--layout Dimens-->
+  <!--  <dimen name="layout_18dp">28dp</dimen>
+    <dimen name="layout_22dp">29dp</dimen>
+    <dimen name="layout_25dp">35dp</dimen>
+    <dimen name="layout_36dp">48dp</dimen>
+    <dimen name="layout_42dp">56dp</dimen>
+    <dimen name="layout_65dp">87dp</dimen>
+    <dimen name="layout_70dp">94dp</dimen>
+    <dimen name="layout_75dp">100dp</dimen>
+    <dimen name="layout_84dp">117dp</dimen>
+    <dimen name="layout_200dp">267dp</dimen>
+    <dimen name="layout_250dp">334dp</dimen>
+    &lt;!&ndash;Text Size&ndash;&gt;
+    <dimen name="text_12sp">15sp</dimen>
+    <dimen name="text_14sp">18sp</dimen>
+    <dimen name="text_15sp">20sp</dimen>
+    <dimen name="text_16sp">22sp</dimen>
+    <dimen name="text_18sp">24sp</dimen>
+    <dimen name="text_20sp">27sp</dimen>
+    <dimen name="text_23sp">32sp</dimen>
+    <dimen name="text_24sp">32sp</dimen>
+    <dimen name="text_30sp">40sp</dimen>
+    &lt;!&ndash;-Shape Corners&ndash;&gt;
+    <dimen name="corner_4dp">6dp</dimen>
+    &lt;!&ndash; comment&ndash;&gt;
+    <dimen name="layout_5dp">7dp</dimen>
+    <dimen name="layout_15dp">20dp</dimen>
+    <dimen name="layout_20dp">27dp</dimen>
+    <dimen name="layout_40dp">54dp</dimen>
+    <dimen name="layout_47dp">62dp</dimen>
+    <dimen name="layout_49dp">66dp</dimen>
+    <dimen name="layout_79dp">106dp</dimen>
+    <dimen name="layout_88dp">117dp</dimen>
+    <dimen name="layout_92dp">124dp</dimen>
+
+    &lt;!&ndash;QR Code&ndash;&gt;
+    <dimen name="layout_308dp">412dp</dimen>
+    <dimen name="layout_60dp">80dp</dimen>
+    &lt;!&ndash;Lines Width&ndash;&gt;
+    <dimen name="line_1dp">1dp</dimen>
+    <dimen name="line_5dp">6dp</dimen>
+    &lt;!&ndash; orders&ndash;&gt;
+    <dimen name="layout_101dp">134dp</dimen>
+    <dimen name="layout_30dp">40dp</dimen>
+    <dimen name="layout_7dp">9dp</dimen>
+    <dimen name="layout_2dp">3dp</dimen>
+    <dimen name="layout_13dp">18dp</dimen>
+    <dimen name="layout_10dp">14dp</dimen>
+    <dimen name="layout_55dp">73dp</dimen>
+    <dimen name="layout_520dp">520dp</dimen>
+
+-->
+</resources>

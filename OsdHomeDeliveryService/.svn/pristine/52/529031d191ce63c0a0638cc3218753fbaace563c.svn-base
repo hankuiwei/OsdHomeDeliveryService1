@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_ffffff"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/layout_65dp"
+    android:paddingRight="@dimen/layout_25dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_OrderTaskIcon"
+            android:layout_width="@dimen/layout_22dp"
+            android:layout_height="@dimen/layout_22dp"
+            android:background="@drawable/icon_launcher" />
+
+        <ImageView
+            android:id="@+id/img_OrderTaskVLine"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_width="@dimen/line_5dp"
+            android:layout_height="@dimen/layout_79dp"
+            android:background="@color/gray_EEEEEE" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.0"
+        android:layout_marginLeft="@dimen/layout_10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/text_OrderTaskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系客户"
+                android:textColor="@color/gray_99A1B3"
+                android:layout_gravity="center"
+                android:textSize="@dimen/text_20sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_5dp"
+                android:layout_weight="1.0"
+                android:layout_marginLeft="@dimen/layout_5dp"
+                android:layout_marginStart="@dimen/layout_5dp"
+                android:layout_marginRight="@dimen/layout_7dp"
+                android:layout_marginEnd="@dimen/layout_7dp"
+                android:layerType="software"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_graydash_line" />
+            <TextView
+                android:id="@+id/text_OrderFlowItemTimeLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_task_time"
+                android:textSize="@dimen/text_20sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_OrderTaskResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_15dp"
+            android:text="与预约时间一致"
+            android:textColor="@color/gray_99A1B3"
+            android:textSize="@dimen/text_15sp" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_OrderTaskRevoke"
+        android:layout_width="@dimen/layout_92dp"
+        android:layout_height="@dimen/layout_40dp"
+        android:text="@string/order_task_revoke"
+        android:textSize="@dimen/text_15sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/layout_25dp"
+        android:layout_marginStart="@dimen/layout_25dp"
+        android:background="@drawable/selector_bg_redbtn"
+        android:gravity="center"
+        android:visibility="invisible"/>
+</LinearLayout>

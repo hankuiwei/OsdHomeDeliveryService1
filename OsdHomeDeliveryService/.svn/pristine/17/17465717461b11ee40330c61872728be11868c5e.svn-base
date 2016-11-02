@@ -1,0 +1,502 @@
+package com.lenovo.csd.eservice.activity;
+
+import android.annotation.TargetApi;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.homedao.bean.Attachment;
+import com.homedao.dao.AttachmentDao;
+import com.homedao.dao.DaoSession;
+import com.lenovo.csd.eservice.R;
+import com.lenovo.csd.eservice.adapter.HomeSpinnerAdapter;
+import com.lenovo.csd.eservice.cache.SharedPrefManager;
+import com.lenovo.csd.eservice.entity.AttachmentType;
+import com.lenovo.csd.eservice.fragment.HintFragment;
+import com.lenovo.csd.eservice.http.AttachmentUploadUtils;
+import com.lenovo.csd.eservice.http.ErrorCode;
+import com.lenovo.csd.eservice.http.HttpClientManager;
+import com.lenovo.csd.eservice.http.NetInterface;
+import com.lenovo.csd.eservice.http.ResultUtils;
+import com.lenovo.csd.eservice.http.callback.NoDoubleClickLinstenner;
+import com.lenovo.csd.eservice.http.callback.adapter.JsonHttpCallBack;
+import com.lenovo.csd.eservice.util.DaoUtils;
+import com.lenovo.csd.eservice.util.FileUtils;
+import com.lenovo.csd.eservice.util.Utils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class AddAttachmentActivity extends BaseActivity implements HintFragment.OnFragmentInteractionListener {
+    private RelativeLayout relativeBack;
+    private LinearLayout mLinearSpinnerParent;
+    private Spinner mSpinner;
+    private RelativeLayout mRelativeArrow;
+    private RelativeLayout mLinearAddImag;
+    private ImageView mImgAddPic;
+    private TextView mTxtChangePic;
+    private ImageView mImgThumb;
+    private Button mBtnAdd;
+    private LinearLayout mLinearGetPic;
+    private LinearLayout mLinearPicThumb;
+    private LinearLayout mLinearPicCamera;
+    private LinearLayout mLinearPicCancel;
+
+
+    //变量
+    private String orderCode;//工单编号
+    public static final String ORDER_CODE = "order_code";//
+    private SharedPreferences mSharePerference;
+    private String userCode;//
+    private String token;//
+    private ArrayList<String> contents;//下拉显示的内容
+    private String type;//备件类型
+    private ArrayList<String> keys;//内容对应编号
+    private String selectedId;
+    private HomeSpinnerAdapter mSpAdapter;
+    private Animation showAnim;//图片方式出现
+    private Animation hideAnim;//图片方式消失
+    private FrameLayout mFramBack;
+    //    private boolean isPicShow;
+    private Uri fileUri;//图片URI
+    private String filePath;//图片路径
+    private boolean isUploading;
+    private HintFragment uploadHintDialog;
+    private boolean isResume;
+    //popwindow
+//    private PopupWindow mPop;
+//    private View contentView;
+//    private ListView mlist;
+
+
+    //常量
+    public static final int REQUEST_THUMB_KK = 0;
+    public static final int REQUEST_THUMB_LOWER_KK = 1;
+    public static final int REQUEST_CARERA = 2;
+    public static final int CONFIRM = 4;//确认上传
+    public static final int CANCEL = 5;//等待WIFI
+    public static final String TAG_HINT = "hint_dialog";
+    public static final int FILE_CAMERA_PERMISSION = 10;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void provideLayout() {
+        setContentView(R.layout.activity_add_attachment);
+    }
+
+    @Override
+    protected void initView() {
+        relativeBack = (RelativeLayout) findViewById(R.id.relative_back);
+        mLinearSpinnerParent = (LinearLayout) findViewById(R.id.linear_spinnerParent);
+        mSpinner = (Spinner) findViewById(R.id.spinner_TypeSelector);
+//        mRelativeArrow = (RelativeLayout) findViewById(R.id.relaArrow);
+        mLinearAddImag = (RelativeLayout) findViewById(R.id.linear_addImage);
+        mImgAddPic = (ImageView) findViewById(R.id.img_addPic);
+        mTxtChangePic = (TextView) findViewById(R.id.text_ChangePic);
+        mImgThumb = (ImageView) findViewById(R.id.imgThumb);
+        mBtnAdd = (Button) findViewById(R.id.btn_addPiece);
+        mLinearGetPic = (LinearLayout) findViewById(R.id.linear_getPic);
+        mLinearPicThumb = (LinearLayout) findViewById(R.id.linear_picThumb);
+        mLinearPicCamera = (LinearLayout) findViewById(R.id.linear_picCamera);
+        mLinearPicCancel = (LinearLayout) findViewById(R.id.linear_picCancel);
+        mFramBack = (FrameLayout) findViewById(R.id.frame_backGound);
+//        contentView = LayoutInflater.from(this).inflate(R.layout.operate_item_listview, null, false);
+//        mRelativeArrow = (RelativeLayout) findViewById(R.id.relaArrow);
+//        mlist = (ListView) contentView.findViewById(R.id.listSelections);
+//        mPop = new PopupWindow(ViewGroup.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+//        mPop.setContentView(contentView);
+    }
+
+    @Override
+    protected void initData() {
+        try {//获取order_code
+            orderCode = getIntent().getStringExtra(ORDER_CODE);
+        } catch (Exception e) {
+            orderCode = "";
+        }
+        //从Sharedpre中拿到token和userCode
+        mSharePerference = SharedPrefManager.getSystemSharedPref(this);
+        userCode = mSharePerference.getString(SharedPrefManager.LOGIN_USER_CODE, "");
+        token = mSharePerference.getString(SharedPrefManager.LOGIN_TOKEN, "");
+        //初始需要的数据
+        contents = new ArrayList<>();
+        keys = new ArrayList<>();
+//        mSpAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, contents);
+        mSpAdapter = new HomeSpinnerAdapter(this, contents);
+//        mSpAdapter.setDropDownViewResource(R.layout.item_spinner_select);
+        mSpinner.setAdapter(mSpAdapter);
+        showAnim = AnimationUtils.loadAnimation(this, R.anim.anim_show_frombottom);
+        hideAnim = AnimationUtils.loadAnimation(this, R.anim.anim_hide_tobottom);
+        hideAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                mLinearGetPic.setVisibility(View.GONE);
+                mFramBack.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        uploadHintDialog = HintFragment.newInstance(CANCEL, CONFIRM, null,
+                getResources().getString(R.string.text_upload_hinttext),
+                null,
+                getResources().getString(R.string.text_wait_wifi),
+                getResources().getString(R.string.text_upload_confirm));
+
+        //网络预加载
+        getAttachmentTypes();
+    }
+
+    @Override
+    protected void setClickLintenner() {
+        relativeBack.setOnClickListener(noDoubleClickLinstenner);
+        mLinearSpinnerParent.setOnClickListener(noDoubleClickLinstenner);
+        mLinearAddImag.setOnClickListener(noDoubleClickLinstenner);
+        mBtnAdd.setOnClickListener(noDoubleClickLinstenner);
+        mLinearPicThumb.setOnClickListener(noDoubleClickLinstenner);
+        mLinearPicCamera.setOnClickListener(noDoubleClickLinstenner);
+        mLinearPicCancel.setOnClickListener(noDoubleClickLinstenner);
+        mFramBack.setOnClickListener(noDoubleClickLinstenner);
+//        mlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                mSpinner.setText(contents.get(position));
+//                mPop.dismiss();
+//            }
+//        });
+    }
+
+    /**
+     * 获取工单类型
+     */
+    public void getAttachmentTypes() {
+        //1，判断网络
+        if (Utils.checkInternetStatus(this) == 0) {
+            Toast.makeText(this, R.string.text_internet_unavalible, Toast.LENGTH_SHORT).show();
+        }
+        String url = NetInterface.GET_ATTACHMENT_TYPELIST + userCode + "/" + orderCode + "?token=" + token;
+        HttpClientManager.get(url, new JsonHttpCallBack<AttachmentType>() {
+            @Override
+            public void onSuccess(AttachmentType result) {
+                if (ResultUtils.isSuccess(AddAttachmentActivity.this, result)) {//
+                    ArrayList<AttachmentType.AttachmentTypeItem> datas = result.getData();
+                    if (datas != null && datas.size() > 0) {
+                        contents.clear();
+                        for (AttachmentType.AttachmentTypeItem item : datas) {
+                            contents.add(item.getValue());
+                            keys.add(item.getKey());
+                        }
+                        mSpAdapter.notifyDataSetChanged();
+//                        if (datas.size() > 0)
+//                            mSpinner.setText(contents.get(0));
+                    }
+                }
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Utils.showServerError(AddAttachmentActivity.this);
+            }
+        });
+    }
+
+    /**
+     * 点击添加操作的逻辑
+     */
+    public void addPieces() {
+        if (Utils.checkInternetStatus(AddAttachmentActivity.this) == 0) {
+            Toast.makeText(AddAttachmentActivity.this, R.string.text_internet_unavalible, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        //预防刚开始进入点击添加包空指针，类型未加载完成
+        try {
+            type = mSpinner.getSelectedItem().toString().trim();
+        } catch (Exception e) {
+        }
+        if (type == null || TextUtils.isEmpty(type) || filePath == null || TextUtils.isEmpty(filePath)) {
+            Toast.makeText(AddAttachmentActivity.this, "缺少文件数据", Toast.LENGTH_SHORT).show();
+            return;
+        }
+//        type = mSpinner.getSelectedItem().toString();
+        selectedId = keys.get(contents.indexOf(type));
+        if (Utils.checkInternetStatus(this) == 1) {//手机网络，提示用户是否上传
+            if (!uploadHintDialog.isAdded() && isResume)
+                uploadHintDialog.show(getFragmentManager(), TAG_HINT);
+        } else if (Utils.checkInternetStatus(this) == 2) {//wifi网络。直接上传
+            uploadAction();
+        }
+    }
+
+    /**
+     * 上传操作
+     */
+    public void uploadAction() {
+        HashMap<String, String> params = new HashMap<>();
+        params.put("order_code", orderCode);
+        params.put("user_code", userCode);
+        params.put("type", keys.get(contents.indexOf(type)));
+
+        AttachmentUploadUtils.UploadAttachAsyncTask task = AttachmentUploadUtils.newTask(this, params, NetInterface.UPLOAD_ATTACHMENT_URL + "token=" + token, new AttachmentUploadUtils.UploadLinstenner() {
+            @Override
+            public void attachUploadStart() {
+                isUploading = true;
+                showLoadingDialog();
+            }
+
+            @Override
+            public void attachUpResult(String result) {
+                dismissLoadingDialog();
+                isUploading = false;
+                if (result == null) {//异常发生
+                    Toast.makeText(AddAttachmentActivity.this, "成功1个，失败0个", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                try {
+                    JSONObject jsonObject = new JSONObject(result);
+                    int status = jsonObject.getInt("status_code");
+                    if (status == ErrorCode.STATUS_SUCCESS) {
+                        //上传成功，结束页面，并返回已上传的数据
+                        Toast.makeText(AddAttachmentActivity.this, "成功1个，失败0个", Toast.LENGTH_SHORT).show();
+                        setResult(RESULT_OK);
+                        finish();
+                    } else {
+                        Toast.makeText(AddAttachmentActivity.this, "成功0个，失败1个", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, true);
+        task.execute(filePath);
+    }
+
+    /**
+     * 点击事件，预防双击
+     */
+    private NoDoubleClickLinstenner noDoubleClickLinstenner = new NoDoubleClickLinstenner() {
+        @Override
+        public void doClick(View view) {
+            switch (view.getId()) {
+                case R.id.relative_back:
+                    finish();
+                    break;
+                case R.id.linear_spinnerParent:
+//                    mPop.showAsDropDown(mRelativeArrow, 0, 0);
+                    break;
+                case R.id.linear_addImage:
+                    mFramBack.setVisibility(View.VISIBLE);
+                    animPiclinear(true);
+                    break;
+                case R.id.btn_addPiece:
+                    if (!Utils.checkCameraAndFilePermission(AddAttachmentActivity.this, FILE_CAMERA_PERMISSION))
+                        return;
+                    if (isUploading)
+                        return;
+                    addPieces();
+                    break;
+                case R.id.linear_picThumb://图库挑选图片
+                    animPiclinear(false);
+                    if (!Utils.checkCameraAndFilePermission(AddAttachmentActivity.this, FILE_CAMERA_PERMISSION))
+                        return;
+                    Utils.openPictureSelect(AddAttachmentActivity.this, REQUEST_THUMB_KK);
+                    break;
+                case R.id.linear_picCamera://照相
+                    animPiclinear(false);
+                    if (!Utils.checkCameraAndFilePermission(AddAttachmentActivity.this, FILE_CAMERA_PERMISSION))
+                        return;
+                    fileUri = Utils.openCamera(AddAttachmentActivity.this, REQUEST_CARERA);
+                    break;
+                case R.id.linear_picCancel://取消
+                    animPiclinear(false);
+                    break;
+                case R.id.frame_backGound:
+                    animPiclinear(false);
+                    break;
+            }
+        }
+    };
+
+    public static void openAddAttachMentActivity(Activity context, String orderID, int requestCode) {
+        Intent intent_add = new Intent(context, AddAttachmentActivity.class);
+        intent_add.putExtra(AddAttachmentActivity.ORDER_CODE, orderID);
+        context.startActivityForResult(intent_add, requestCode);
+    }
+
+    /**
+     * 照相方式UI
+     *
+     * @param show
+     */
+    private void animPiclinear(boolean show) {
+        if (show) {//
+            mFramBack.setVisibility(View.VISIBLE);
+            mLinearGetPic.setVisibility(View.VISIBLE);
+            mLinearGetPic.startAnimation(showAnim);
+        } else {
+            mLinearGetPic.startAnimation(hideAnim);
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case REQUEST_THUMB_LOWER_KK:
+                if (resultCode == RESULT_OK) {
+                    if (data != null && data.getData() != null) {
+                        mImgThumb.setVisibility(View.VISIBLE);
+                        mImgAddPic.setVisibility(View.GONE);
+                        mTxtChangePic.setVisibility(View.VISIBLE);
+                        fileUri = data.getData();
+                        filePath = fileUri.getPath();
+                        Utils.displayCompressedBitmap(AddAttachmentActivity.this, mImgThumb, filePath);
+                    } else {
+                        Toast.makeText(AddAttachmentActivity.this, "", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                break;
+            case REQUEST_THUMB_KK:
+                if (resultCode == RESULT_OK) {
+                    if (data != null && data.getData() != null) {
+                        mImgThumb.setVisibility(View.VISIBLE);
+                        mImgAddPic.setVisibility(View.GONE);
+                        mTxtChangePic.setVisibility(View.VISIBLE);
+                        fileUri = data.getData();
+                        String[] filePathColumn = {MediaStore.Images.Media.DATA};
+                        Cursor cursor = getContentResolver().query(fileUri,
+                                filePathColumn, null, null, null);
+                        if(cursor == null){
+                            Toast.makeText(AddAttachmentActivity.this, "图库出现异常", Toast.LENGTH_SHORT).show();
+                            mImgThumb.setVisibility(View.GONE);
+                            mImgAddPic.setVisibility(View.VISIBLE);
+                            mTxtChangePic.setVisibility(View.GONE);
+                            return;
+                        }
+                        cursor.moveToFirst();
+                        int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                        filePath = cursor.getString(columnIndex);
+                        cursor.close();
+                        Utils.displayCompressedBitmap(AddAttachmentActivity.this, mImgThumb, filePath);
+                    } else {
+                        Toast.makeText(AddAttachmentActivity.this, "图库出现异常", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                break;
+            case REQUEST_CARERA:
+                if (resultCode == RESULT_OK) {
+                    mImgThumb.setVisibility(View.VISIBLE);
+                    mImgAddPic.setVisibility(View.GONE);
+                    mTxtChangePic.setVisibility(View.VISIBLE);
+                    if (fileUri != null) {
+                        filePath = fileUri.getPath();
+                        Utils.displayCompressedBitmap(AddAttachmentActivity.this, mImgThumb, filePath);
+                    } else {
+                        Toast.makeText(AddAttachmentActivity.this, "拍照出现异常", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                }
+                break;
+        }
+
+
+    }
+
+    @Override
+    public void onFragmentInteraction(int Action) {
+        switch (Action) {
+            case CONFIRM:
+                uploadAction();
+                break;
+            case CANCEL:
+                //数据入库
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Attachment attach = new Attachment();
+                        String savePath = AttachmentUploadUtils.generateCompressedPic(AddAttachmentActivity.this, filePath, FileUtils.getAttachFile(AddAttachmentActivity.this).getPath() + "/" + System.currentTimeMillis() + ".jpg");
+                        File file = new File(savePath);
+                        if (file != null && file.exists()) {
+                            int size = (int) ((float) file.length() / 1024);
+                            attach.setFile_size(String.valueOf(size) + "kb");
+                        }
+                        attach.setOrder_code(orderCode);
+                        attach.setUser_code(userCode);
+                        attach.setFile_id("");
+                        attach.setCreate_time("");
+                        attach.setType(type);
+                        attach.setFile_path(savePath);
+                        attach.setType_id(selectedId);
+                        attach.setStatus("未上传");
+                        addAttachment(attach);
+                    }
+                }).start();
+
+                isUploading = false;
+                //上传成功，结束页面，并返回已上传的数据
+                setResult(RESULT_OK);
+                finish();
+                break;
+        }
+    }
+
+    /**
+     * 数据库添加附件数据
+     */
+    private void addAttachment(Attachment attachment) {
+        DaoSession sessiono = DaoUtils.getDaoSession(this);
+        AttachmentDao atDao = sessiono.getAttachmentDao();
+        atDao.insert(attachment);
+        atDao.getDatabase().query(atDao.getTablename(), null, null, null, null, null, null).requery();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        isResume = true;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        isResume = false;
+    }
+}

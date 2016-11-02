@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_373b3e"
+        android:gravity="center"
+        android:paddingBottom="@dimen/layout_25dp"
+        android:paddingTop="@dimen/layout_15dp"
+        android:text="@string/string_spare_part"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_30sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_10dp"
+        android:background="@color/color_F4F4F4" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/orders_unfinished_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_partUnusedLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_2dp"
+                android:background="@color/red_E47B78" />
+
+            <RelativeLayout
+                android:id="@+id/relative_UnusedTab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_partUnused"
+                    android:layout_width="@dimen/layout_25dp"
+                    android:layout_height="@dimen/layout_25dp"
+                    android:background="@drawable/icon_unusedpart_selected" />
+
+                <TextView
+                    android:id="@+id/text_unusedPart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_10dp"
+                    android:layout_toRightOf="@id/img_partUnused"
+                    android:text="@string/text_parts_unused"
+                    android:textColor="@color/red_E47B78"
+                    android:textSize="@dimen/text_20sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/orders_finished_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_partsUsedLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_2dp"
+                android:background="@color/gray_cccccc" />
+
+            <RelativeLayout
+                android:id="@+id/relative_UsedTab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_0dpcorner_gray_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_partUsed"
+                    android:layout_width="@dimen/layout_25dp"
+                    android:layout_height="@dimen/layout_25dp"
+                    android:background="@drawable/icon_usedpart_unselected" />
+
+                <TextView
+                    android:id="@+id/text_usedPart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_10dp"
+                    android:layout_toRightOf="@id/img_partUsed"
+                    android:text="@string/text_parts_used"
+                    android:textColor="@color/gray_cccccc"
+                    android:textSize="@dimen/text_20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_backUpParts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+
+

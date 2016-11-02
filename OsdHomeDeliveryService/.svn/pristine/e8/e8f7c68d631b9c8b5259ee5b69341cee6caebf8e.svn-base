@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F4F4F4">
+
+        <com.lenovo.csd.eservice.widget.RefreshHeaderView
+            android:id="@+id/swipe_refresh_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+
+        <com.lenovo.csd.eservice.widget.LoadMoreFooterView
+            android:id="@+id/swipe_load_more_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp" />
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_nullMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/layout_49dp"
+            android:layout_height="@dimen/layout_40dp"
+            android:layout_marginTop="@dimen/layout_200dp"
+            android:background="@drawable/icon_orders_box" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_15dp"
+            android:text="@string/text_no_attach"
+            android:textColor="@color/gray_cccccc"
+            android:textSize="@dimen/text_16sp" />
+    </LinearLayout>
+
+</FrameLayout>

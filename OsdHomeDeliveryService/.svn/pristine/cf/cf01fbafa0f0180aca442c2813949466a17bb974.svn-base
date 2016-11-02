@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_373b3e"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.lenovo.csd.eservice.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:background="@color/black_373b3e"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_atdoor_toolbox"
+            android:textColor="@color/white_ffffff"
+            android:textSize="@dimen/text_30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_75dp"
+            android:background="@drawable/lenovo_logo" />
+
+        <EditText
+            android:id="@+id/edit_loginAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_65dp"
+            android:layout_marginRight="@dimen/layout_65dp"
+            android:layout_marginTop="@dimen/layout_75dp"
+            android:background="@drawable/shape_4dpcorner_white_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/text_engineer_id"
+            android:padding="@dimen/layout_25dp"
+            android:singleLine="true"
+            android:textSize="@dimen/text_23sp"
+            android:textColorHint="@color/gray_cccccc" />
+
+        <EditText
+            android:id="@+id/edit_loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_65dp"
+            android:layout_marginRight="@dimen/layout_65dp"
+            android:layout_marginTop="@dimen/layout_25dp"
+            android:background="@drawable/shape_4dpcorner_white_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/text_password"
+            android:inputType="textPassword"
+            android:padding="@dimen/layout_25dp"
+            android:singleLine="true"
+            android:textSize="@dimen/text_23sp"
+            android:textColorHint="@color/gray_cccccc" />
+
+        <Button
+            style="?android:borderlessButtonStyle"
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_65dp"
+            android:layout_marginRight="@dimen/layout_65dp"
+            android:layout_marginTop="@dimen/layout_25dp"
+            android:background="@drawable/selector_bg_redbtn"
+            android:gravity="center"
+            android:padding="@dimen/layout_25dp"
+            android:text="@string/text_login"
+            android:textColor="@color/white_ffffff"
+            android:textSize="@dimen/text_23sp" />
+
+        <TextView
+            android:id="@+id/text_versionLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="@dimen/layout_25dp"
+            android:text="@string/text_app_version"
+            android:textColor="@color/gray_999999"
+            android:textSize="@dimen/text_15sp" />
+    </LinearLayout>
+</LinearLayout>

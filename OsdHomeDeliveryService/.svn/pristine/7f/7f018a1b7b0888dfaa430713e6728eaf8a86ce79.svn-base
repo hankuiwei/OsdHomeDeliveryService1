@@ -1,0 +1,248 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="app_name">上门无忧</string>
+    <string name="string_work_order">工单</string>
+    <string name="string_spare_part">备件</string>
+    <string name="string_learning">学习</string>
+    <string name="string_at_me">我的</string>
+    <string name="text_server_error">服务器开小差了，请稍后重试。</string>
+
+
+    <!--我的 -->
+    <string name="mine_title">我的</string>
+    <string name="mine_name">郑某某</string>
+    <string name="mine_job">技术主管工程师</string>
+    <string name="mine_Comment_notes">点评记录</string>
+    <string name="mine_appendix">附件上传</string>
+    <string name="mine_setting">设置</string>
+    <string name="mine_Feedback">意见反馈</string>
+    <string name="mine_exit">退出登录</string>
+
+    <string name="mine_scan">扫一扫，添加工程师</string>
+
+    <!--我的　点评记录-->
+    <string name="mine_Comment">点评</string>
+    <string name="mine_history">历史</string>
+    <string name="mine_this_month">本月</string>
+    <string name="mine_good">好评：</string>
+    <string name="mine_good_text">7288</string>
+    <string name="mine_middle">中评：</string>
+    <string name="mine_middle_text">132</string>
+    <string name="mine_bad">差评：</string>
+    <string name="mine_bad_text">5</string>
+    <string name="mine_rate_comment">点评率：</string>
+    <string name="mine_rate_comment_text">45.06%</string>
+    <string name="mine_Comment_week">本周评价</string>
+    <string name="mine_Comment_text">评论：very good services !</string>
+
+    <!--我的　设置 -->
+    <string name="mine_hint_title">上门提醒时间</string>
+    <string name="mine_select">请选择</string>
+    <string name="mine_not_hint">不提醒</string>
+    <string name="mine_hint">提醒时间</string>
+    <string name="mine_save">保存</string>
+
+    <!--　工单列表 -->
+    <string name="orders_title">工单</string>
+    <string name="orders_unfinished">未完成</string>
+    <string name="orders_finished">已完成</string>
+    <string name="orders_unfinished_middle_label">活儿已清，可以适当地放松一下咯！</string>
+    <string name="orders_id">201605022100889002</string>
+    <string name="orders_time">(2016年5月31日 14:00)</string>
+    <string name="orders_state">已联系</string>
+    <string name="orders_grade">MA保外维修_备件销售（尊享）</string>
+    <string name="orders_Customer_name_label">客户姓名</string>
+    <string name="orders_Customer_name">郑某某</string>
+    <string name="orders_Customer_phone_label">客户电话</string>
+    <string name="orders_Customer_phone">18911778450</string>
+    <string name="orders_Customer_address_label">客户地址</string>
+    <string name="orders_Customer_address">北京市海淀区创业路８号群英科技园三标２号楼</string>
+    <string name="orders_Customer_machine_label">机器信息</string>
+    <string name="orders_Customer_machine">EB35861934【昭阳K2450】</string>
+    <string name="orders_Customer_spareParts_label">备件信息</string>
+    <string name="orders_Customer_spareParts">1231546【Intel I3-3120M L1.3M 2cPGA处理器】【已满足】</string>
+    <string name="orders_Customer_fault_label">故障描述</string>
+    <string name="orders_Customer_fault">客户希望加装SSD，要求数据迁移要完整。</string>
+
+    <!--登录-->
+    <string name="text_atdoor_toolbox">上门无忧</string>
+    <string name="text_login">登&#160;录</string>
+    <string name="text_engineer_id">工程师编号</string>
+    <string name="text_password">密码</string>
+    <string name="text_app_version">版本号</string>
+    <string name="text_account_error">抱歉，您输入的用户名/密码格式错误，请确认后重新输入</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_confirm">确定</string>
+    <string name="text_login_afterdownload">正在下载，请安装后重新登录</string>
+    <string name="text_internet_unavalible">网络不可用，请连接网络后重试</string>
+    <string name="text_token_failed">您的身份信息已失效，请重新登录</string>
+
+
+    <!--更新app-->
+    <string name="text_downloading">正在下载</string>
+    <string name="text_start_download">开始下载</string>
+    <string name="text_update_title">产品更新</string>
+    <string name="text_download_error">安装包下载失败，请稍后重试</string>
+    <!--工单操作页面-->
+    <string name="text_backup_pieces">附件</string>
+    <string name="text_workorder_flow">工单流程</string>
+    <string name="text_customer_moreinfo">更多客户信息</string>
+    <string name="text_device_moreinfo">更多主机信息</string>
+    <string name="text_technologyinfo_related">相关技术通报</string>
+    <string name="text_copy_orderid">复制工单编号</string>
+    <string name="text_orderid_copied">工单号码已经复制到粘贴板</string>
+    <string name="text_commit">提&#160;交</string>
+    <string name="text_choose_please">请选择</string>
+    <string name="text_input_note">请输入备注</string>
+    <string name="text_change_pieces_record">换件/非换件记录</string>
+    <string name="text_add_changedpieces_record">添加换件记录</string>
+    <string name="text_add_unchangedpieces_record">添加非换件记录</string>
+    <string name="text_reason_user">用户原因</string>
+    <string name="text_reason_station">站端原因</string>
+    <string name="text_reason_parts">备件原因</string>
+    <string name="text_start_serverice">开始服务</string>
+    <string name="text_start_out">现在出发</string>
+    <string name="text_order_handlebackground">当前工单状态已转至协调员PC端处理</string>
+
+    <!--工单流程-->
+    <string name="order_task">流程</string>
+    <string name="order_task_revoke">撤回</string>
+    <string name="order_task_time">10：50</string>
+    <!--添加换件-->
+    <string name="add_change">添加换件</string>
+    <string name="change_kinds">换件类别和类型</string>
+    <string name="change_kind">换件类别</string>
+    <string name="change_type">换件类型</string>
+    <string name="change_up">换上件信息</string>
+    <string name="sparePart_id">备件编码：</string>
+    <string name="sparePart_bar">备件条码：</string>
+    <string name="sparePart_describe">备件描述：</string>
+    <string name="sparePart_classification">备件分类：</string>
+    <string name="sparePart_price_up">押&#160; 款&#160; 价：</string>
+    <string name="change_down">换下件信息</string>
+    <string name="change_down_identification">换下件标识</string>
+    <string name="sparePart_down_Reason">生成原因 &#160;&#160;</string>
+    <string name="sparePart_NotT_Reason">未通过原因</string>
+    <string name="sparePart_down_id">换下件编码</string>
+    <string name="sparePart_down_bar">换下件条码</string>
+    <string name="sparePart_down_NonDamageCause">非损原因</string>
+    <string name="sparePart_down_describe">备件描述</string>
+    <string name="sparePart_down_downclassification">备件大类</string>
+    <string name="sparePart_down_price">押款价</string>
+    <string name="sparePart_Packing">装箱单</string>
+    <string name="sparePart_Generate_bar">系统生成条码</string>
+    <string name="sparePart_Failure_phenomena">故障现象</string>
+    <string name="sparePart_Failure_Code">故障代码</string>
+    <string name="sparePart_Special_Remarks">特殊备注</string>
+    <string name="change_device_moreinfo">更多机器信息</string>
+    <string name="text_input_OrderCode">系统内无此工单对应主机的装箱单信息</string>
+
+    <string name="sparePart_input">请输入</string>
+    <string name="sparePart_Tinput">隐性/特殊故障详细描述</string>
+    <string name="text_order_date">预约时间：</string>
+    <!--添加非换件-->
+    <string name="add_notchange">添加非换件</string>
+    <string name="notchange_kinds">部件大类和动作</string>
+    <string name="componentClass">部件大类</string>
+    <string name="nonChangingParts">非换件动作</string>
+    <string name="nonChanginghistory">换件历史</string>
+    <string name="nonChangehit">CC未派非换件活动，无法添加，或您已添加非换件。</string>
+    <!--意见反馈-->
+    <string name="text_mine">我的</string>
+    <string name="text_fade_back">意见反馈</string>
+    <string name="text_input_please">请录入</string>
+    <string name="text_content_null">请填写意见内容</string>
+    <string name="text_fadeback_success">您的反馈意见已经成功提交！</string>
+    <string name="text_fadeback_fail">意见提交失败</string>
+
+    <!--附件-->
+    <string name="text_add_backup_pieces">添加附件</string>
+    <string name="text_add">添&#160;加</string>
+    <string name="text_upload_already">已上传</string>
+    <string name="text_wait_wifi">先不上传</string>
+    <string name="text_upload_confirm">确认上传</string>
+    <string name="text_upload_hinttext">当前所在网络并非wifi环境，是否继续上传？</string>
+    <string name="text_attachment_type">附件类型</string>
+    <string name="text_image_thumnail">图库</string>
+    <string name="text_take_photo">拍照</string>
+    <string name="text_change_pic">更换图片</string>
+
+
+    <!--备件列表-->
+    <string name="text_parts_used">已使用</string>
+    <string name="text_parts_unused">未使用</string>
+    <string name="text_noparts_partfragment">没有备件信息</string>
+    <string name="text_pr_code">P R编码:</string>
+    <string name="text_part_desc">备件描述:</string>
+    <string name="text_part_code">备件编码:</string>
+    <string name="text_part_linecode">备件条码:</string>
+    <string name="text_newpart_code">换上件编码:</string>
+    <string name="text_oldpart_code">换下件编码:</string>
+    <string name="text_newpart_linecode">换上件条码:</string>
+    <string name="text_oldpart_linecode">换下件条码:</string>
+    <string name="text_newpart_lowerprice">换上件押款价:</string>
+    <string name="text_oldpart_lowerprice">换下件押款价:</string>
+    <!--收集用户信息-->
+    <string name="collect">收集用户信息</string>
+    <!--更多客户信息-->
+    <string name="text_customer_level">客户级别</string>
+    <string name="text_contact_records">接触记录</string>
+    <string name="text_function_tobeopened">功能待开放~</string>
+    <!--更多主机信息-->
+    <string name="text_hostmachine_info">主机信息</string>
+    <string name="text_fillbox_order">装箱单</string>
+    <string name="text_input_sn">请输入主机SN码</string>
+    <string name="text_search">搜索</string>
+    <string name="text_product_sn">产品序列号</string>
+    <string name="text_product_name">产品名称</string>
+    <string name="text_product_createtime">生产日期</string>
+    <string name="text_bout_time">购买日期</string>
+    <string name="text_ensurence_endtime">保修截止日期</string>
+    <string name="text_getdoor_endtime">上门截止日期</string>
+    <string name="text_piece_type">部件类型：</string>
+    <string name="text_piece_code">部件编号：</string>
+    <string name="text_piece_name">部件名称：</string>
+    <string name="text_newpiece_desc">换上件描述：</string>
+    <string name="text_oldpiece_desc">换下件描述：</string>
+    <string name="text_piece_repairtime">维修时间：</string>
+    <string name="text_describ">描述</string>
+    <string name="text_keeprepair_starttime">保修开始日期</string>
+    <string name="text_getdoor_starttime">上门开始日期</string>
+    <!--个推-->
+    <string name="hello">个推开放平台Sdk演示程序</string>
+    <string name="up">绑定sdk</string>
+    <string name="down">解绑sdk</string>
+    <string name="no_clientid">(none)</string>
+    <string name="start">启动</string>
+    <string name="stop">停止</string>
+    <string name="clear">清除日志</string>
+    <string name="enablelog">开启debug日志</string>
+    <string name="bindcell">绑定手机号</string>
+    <string name="pmsg">透传测试</string>
+    <string name="psmsg">通知栏测试</string>
+    <string name="begin">开始(h)</string>
+    <string name="end">结束</string>
+    <string name="duration">持续时间(h)</string>
+    <string name="set_heartbeat">心跳间隔(s)</string>
+    <string name="send_msg">发送消息</string>
+    <string name="bind_alias">绑定别名</string>
+    <string name="unbind_alias">解除别名绑定</string>
+
+    <!--我的附件上传-->
+    <string name="text_unupload_attachment">待上传</string>
+    <string name="text_upload_attachments">已上传</string>
+    <string name="text_no_attach">没有附件信息</string>
+    <string name="text_upload">上传</string>
+    <string name="text_delete">删除</string>
+    <string name="text_order_id">工单编号：</string>
+    <string name="text_attach_type">附件类型：</string>
+    <string name="text_attach_size">附件大小：</string>
+    <string name="text_upload_time">上传时间：</string>
+    <string name="text_close">关&#160;&#160;闭</string>
+    <string name="text_about">关于</string>
+    <string name="text_current_appversion">当前版本</string>
+
+
+</resources>

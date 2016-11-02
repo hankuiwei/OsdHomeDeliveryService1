@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/black_373b3e"
+    tools:context="com.lenovo.csd.eservice.activity.BaseActivity">
+    <LinearLayout
+        android:id="@+id/Lin_deviceMoreinfoBack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:background="#373B3E"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/layout_15dp"
+            android:layout_height="@dimen/layout_25dp"
+            android:src="@drawable/icon_back"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/layout_25dp"
+            android:layout_marginStart="@dimen/layout_25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="0dp"
+            android:paddingLeft="@dimen/layout_10dp"
+            android:paddingRight="0dp"
+            android:paddingStart="@dimen/layout_10dp"
+            android:text="@string/change_device_moreinfo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_23sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/layout_25dp"
+        android:paddingStart="@dimen/layout_25dp"
+        android:paddingRight="@dimen/layout_25dp"
+        android:background="@color/white"
+        android:paddingEnd="@dimen/layout_25dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/layout_20dp">
+            <!--
+            <EditText
+                android:id="@+id/edit_PackinputOCode"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/layout_55dp"
+                android:layout_marginRight="@dimen/layout_25dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/shape_4dpcorner_gray_bg"
+                android:gravity="center_vertical"
+                android:hint="@string/text_input_OrderCode"
+                android:paddingLeft="@dimen/layout_15dp"
+                android:singleLine="true"
+                android:textColor="@color/gray_666666"
+                android:textColorHint="@color/gray_cccccc"
+                android:textSize="@dimen/layout_18dp" />
+
+            <Button
+                android:id="@+id/btn_PacksearchOCode"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_55dp"
+                android:background="@drawable/selector_bg_redbtn"
+                android:gravity="center"
+                android:paddingLeft="@dimen/layout_55dp"
+                android:paddingRight="@dimen/layout_55dp"
+                android:text="@string/text_search"
+                android:textColor="@color/white_ffffff"
+                android:textSize="@dimen/layout_18dp" />
+                -->
+            <TextView
+                android:id="@+id/edit_PackinputOCode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_55dp"
+                android:gravity="center"
+                android:text="@string/text_input_OrderCode"
+                android:singleLine="true"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/layout_18dp"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/Recycle_PackingList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            />
+       <!-- <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_boxOrders"
+            android:scrollbars="none"
+            android:dividerHeight="@dimen/line_1dp"
+            /> -->
+    </LinearLayout>
+</LinearLayout>

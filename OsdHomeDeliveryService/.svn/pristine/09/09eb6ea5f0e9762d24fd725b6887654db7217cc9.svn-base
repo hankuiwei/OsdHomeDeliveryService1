@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView_unUsedPartItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:longClickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_ffffff"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/layout_30dp"
+            android:paddingLeft="@dimen/layout_25dp"
+            android:paddingRight="@dimen/layout_25dp"
+            android:paddingTop="@dimen/layout_30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/text_usedPartOrderID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="123456312412"
+                    android:textColor="@color/gray_666666"
+                    android:textSize="@dimen/text_20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_usedPartType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="未满足"
+                    android:textColor="@color/red_E47B78"
+                    android:textSize="@dimen/text_16sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_part_desc"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="@dimen/text_15sp" />
+
+                <TextView
+                    android:id="@+id/text_usedPartDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_10dp"
+                    android:textColor="@color/gray_666666"
+                    android:textSize="@dimen/text_15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_15dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/layout_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_newpart_code"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <TextView
+                        android:id="@+id/text_newPartCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_10dp"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/text_15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_oldpart_code"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <TextView
+                        android:id="@+id/text_oldPartCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_10dp"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/text_15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_15dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/layout_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_newpart_linecode"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <TextView
+                        android:id="@+id/text_newPartLineCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_10dp"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/text_15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_oldpart_linecode"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <TextView
+                        android:id="@+id/text_oldPartLineCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_10dp"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/text_15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_15dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/layout_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_newpart_lowerprice"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <TextView
+                        android:id="@+id/text_oldPartLowerPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_10dp"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/text_15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_oldpart_lowerprice"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <TextView
+                        android:id="@+id/text_oldPartID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_10dp"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/text_15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_20dp"
+        android:background="@color/color_F4F4F4"></LinearLayout>
+</LinearLayout>
+

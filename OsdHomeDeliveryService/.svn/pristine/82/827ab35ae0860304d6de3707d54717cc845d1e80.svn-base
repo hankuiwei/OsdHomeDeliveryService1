@@ -1,0 +1,169 @@
+-injars 'D:\OsdHomeDeliveryService\app\build\intermediates\transforms\jarMerging\debug\jars\1\1f\combined.jar'
+-outjars 'D:\OsdHomeDeliveryService\app\build\intermediates\multi-dex\debug\componentClasses.jar'
+
+-libraryjars 'E:\Android\sdk\build-tools\23.0.3\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontusemixedcaseclassnames
+-dontpreverify
+-dontnote **,com.android.tools.fd.**,android.support.multidex.MultiDexExtractor
+-dontwarn **
+-printconfiguration 'D:\OsdHomeDeliveryService\app\build\intermediates\multi-dex\debug\components.flags'
+
+
+-keep class com.lenovo.csd.eservice.ServiceApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.lenovo.csd.eservice.activity.HomeActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.LoginActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.MyQRCodeActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.MyCommentActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.MySettingActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.CollectUserinfoActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.services.AppUpdateService {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.OperateOrderActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.FadeBackActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.OrderAttachmentActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.MoreAboutCustomActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.MoreAboutMachineActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.TechRelatedActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.AddAttachmentActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.MyAttachments {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.OrdertaskActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.AddChangeRecordActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.AddUnChangeRecordActivity {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.ChangePackingListActivity {
+    <init>();
+}
+
+-keep class com.igexin.sdk.PushReceiver {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.push.PushBoradCastReceiver {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.push.SystemReceiver {
+    <init>();
+}
+
+-keep class com.baidu.location.f {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.services.LoadLocatService {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.services.GetLocationService {
+    <init>();
+}
+
+-keep class com.lenovo.csd.eservice.activity.AboutActivity {
+    <init>();
+}
+
+-keep class com.igexin.sdk.PushService {
+    <init>();
+}
+
+-keep class com.igexin.sdk.PushServiceUser {
+    <init>();
+}
+
+-keep class com.igexin.sdk.PushManagerReceiver {
+    <init>();
+}
+
+-keep class com.igexin.sdk.PushActivity {
+    <init>();
+}
+
+-keep class com.igexin.sdk.GActivity {
+    <init>();
+}
+
+-keep class com.igexin.download.DownloadService {
+    <init>();
+}
+
+-keep class com.igexin.download.DownloadReceiver {
+    <init>();
+}
+
+-keep class com.igexin.download.DownloadProvider {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.tools.fd.** {
+    <fields>;
+    <methods>;
+}

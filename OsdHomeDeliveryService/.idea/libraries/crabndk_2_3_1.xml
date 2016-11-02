@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="crabndk-2.3.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/crab.baidu.crabndk/crabndk/2.3.1/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/crab.baidu.crabndk/crabndk/2.3.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/crab.baidu.crabndk/crabndk/2.3.1/35f8d9eddf3ec55319e77d24f8af57c4563b1cb1/crabndk-2.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

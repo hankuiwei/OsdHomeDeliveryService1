@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/layout_5dp"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_4dpcorner_white_bg"
+        android:gravity="start"
+        android:minHeight="@dimen/layout_92dp"
+        android:paddingLeft="@dimen/layout_10dp"
+        android:paddingTop="@dimen/layout_15dp"
+        android:paddingRight="@dimen/layout_10dp"
+        android:paddingBottom="@dimen/layout_15dp"
+        android:textSize="@dimen/text_15sp"
+        android:textColor="@color/gray_666666"
+        android:textColorHint="@color/gray_cccccc"
+        android:id="@+id/editItem"
+        android:maxLength="@integer/edit_max_num"
+        ></EditText>
+</LinearLayout>

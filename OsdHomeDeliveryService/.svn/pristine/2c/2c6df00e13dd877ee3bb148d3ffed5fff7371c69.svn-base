@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_ffffff"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/layout_60dp"
+    android:paddingRight="@dimen/layout_25dp">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_OrderTaskIcon"
+            android:layout_width="@dimen/layout_22dp"
+            android:layout_height="@dimen/layout_22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/icon_launcher" />
+
+        <ImageView
+            android:id="@+id/img_OrderTaskVLine"
+            android:layout_width="@dimen/line_5dp"
+            android:layout_height="@dimen/layout_79dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/gray_EEEEEE" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layout_10dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/text_OrderTaskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="联系客户"
+                android:textColor="@color/gray_99A1B3"
+                android:textSize="@dimen/text_20sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_5dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@drawable/shape_graydash_line"
+                android:layerType="software" />
+
+            <TextView
+                android:id="@+id/text_OrderFlowItemTimeLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/layout_25dp"
+                android:layout_marginRight="@dimen/layout_25dp"
+                android:text="@string/order_task_time"
+                android:textColor="@color/gray_99A1B3"
+                android:textSize="@dimen/text_20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_OrderTaskResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_15dp"
+            android:clickable="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="与预约时间一致"
+            android:textColor="@color/gray_99A1B3"
+            android:textSize="@dimen/text_15sp" />
+
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/btn_OrderTaskRevoke"
+        android:layout_width="@dimen/layout_92dp"
+        android:layout_height="@dimen/layout_40dp"
+
+        android:background="@drawable/selector_bg_redbtn"
+        android:gravity="center"
+        android:text="@string/order_task_revoke"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_15sp"
+        android:visibility="invisible" />
+</LinearLayout>

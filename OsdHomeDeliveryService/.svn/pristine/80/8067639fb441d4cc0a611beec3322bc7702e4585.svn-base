@@ -1,0 +1,937 @@
+package com.lenovo.csd.eservice.util;
+
+
+import android.Manifest;
+import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.ClipboardManager;
+import android.content.ContentUris;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
+import android.content.res.Configuration;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.graphics.drawable.Drawable;
+import android.media.ExifInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
+import android.provider.DocumentsContract;
+import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.telephony.TelephonyManager;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.google.gson.Gson;
+import com.lenovo.csd.eservice.R;
+import com.lenovo.csd.eservice.activity.LoginActivity;
+import com.lenovo.csd.eservice.activity.manager.ActivityCollector;
+import com.lenovo.csd.eservice.cache.SharedPrefManager;
+import com.lenovo.csd.eservice.entity.base.SyncPicData;
+import com.lenovo.csd.eservice.http.HttpClientManager;
+import com.lenovo.csd.eservice.http.NetInterface;
+import com.lenovo.csd.eservice.http.callback.adapter.JsonHttpCallBack;
+import com.lenovo.csd.eservice.services.LenovoLocService;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+
+
+/**
+ * Created by shengtao on 2016/4/20.
+ */
+public class Utils {
+    /**
+     * 方法1,不通过泛型，直接传一个类型，比较简单，略过
+     * 方法2,通过调用Gson库自带的fromJson(String json, Type typeOfT)，将泛型的Class强转为Type
+     *
+     * @param json
+     * @param cls
+     * @param <T>
+     * @return
+     */
+    public static <T> T jsonStringToModelByType(String json, Class<T> cls) {
+        T t = null;
+        //Type typeOfObject=new TypeToken<T>(){}.getType();
+        //此处调用的是fromJson(String json, Class<T> classOfT)
+        t = new Gson().fromJson(json, (Type) cls);
+        //还可以调用fromJson(String json, Type typeOfT)，
+        //t= new Gson().fromJson(json,(Type)cls);
+        return t;
+    }
+
+    /**
+     * 方法3，通过调用Gson库自带的方法fromJson，传入泛型的Class
+     *
+     * @param result
+     * @param clazz
+     * @param <T>
+     * @return
+     */
+    public static <T> T fromJsonStringToModeByClass(String result, Class<T> clazz) {
+        if (result == null) {
+            return null;
+        }
+        try {
+            return new Gson().fromJson(result, clazz);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 读取Asset目录下的文件，转换为String
+     *
+     * @param context
+     * @param fileName
+     * @return
+     */
+    public static String readAsssetText(Context context, String fileName) {
+        String jsonString = "";
+        AssetManager manager = context.getAssets();
+        try {
+            InputStream inputStream = manager.open(fileName);
+            jsonString = changeStream2String(inputStream);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return jsonString;
+    }
+
+    /**
+     * 将inputStream转为String
+     *
+     * @param inputStream
+     * @return
+     */
+    public static String changeStream2String(InputStream inputStream) {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        String result = null;
+        int len = 0;
+        byte[] buffer = new byte[4 * 1024];
+        try {
+            while ((len = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, len);
+            }
+            outputStream.flush();
+            result = new String(outputStream.toByteArray(), "UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            if (null != inputStream) {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (null != outputStream) {
+                try {
+                    outputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return result;
+    }
+
+    public static int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
+
+    public static int px2dip(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue / scale + 0.5f);
+    }
+
+    /**
+     * Glide加载方式
+     *
+     * @param Activity, Glide的生命周期会与Activity或者Fragment保持一致，比如 Paused状态在暂停加载，在Resumed的时候又自动重新加载。
+     *                  所以,我建议传参的时候传递Activity 和 Fragment给该方法，而不是Context。
+     * @param url
+     * @param imageView
+     * @param defaultId
+     */
+    public static void loadImageWithGlide(Context Activity, String url, ImageView imageView, int defaultId) {
+        if (Activity != null) {
+            Glide.with(Activity.getApplicationContext())
+                    .load(url)//加载URL
+                    .dontAnimate()
+                    .placeholder(defaultId)//占位图
+                    .error(defaultId)//加载错误图
+                    .into(imageView);
+        }
+    }
+
+    public static void loadImageWithGlideCall(final Context Activity, final String url, final ImageView imageView, int defaultId, final String fileId) {
+        if (Activity != null) {
+            Glide.with(Activity.getApplicationContext())
+                    .load(url)//加载URL
+                    .dontAnimate()
+                    .placeholder(defaultId)//占位图
+                    .error(defaultId)//加载错误图
+                    .into(new SimpleTarget<GlideDrawable>() {
+                        @Override
+                        public void onLoadStarted(Drawable placeholder) {
+                        }
+
+                        @Override
+                        public void onLoadFailed(Exception e, Drawable errorDrawable) {
+                            Utils.syncFailedPic(Activity, imageView, fileId, url);
+                        }
+
+                        @Override
+                        public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+                            imageView.setImageDrawable(resource);
+                        }
+                    });
+        }
+    }
+
+    public static boolean isNumber(String str) {
+        // return str.matches("^[-+]?(([0-9]+)([.]([0-9]+))?)$");
+        if (TextUtils.isEmpty(str)) {
+            return false;
+        } else {
+            return str.matches("[\\d]+[.]?[\\d]+");
+        }
+    }
+
+    /**
+     * Return 是否是横屏
+     */
+    public static Boolean isLandscape(Context c) {
+        return c.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+    }
+
+    /**
+     * 跳转到浏览器
+     */
+    public static void goBrowser(Context context, String url) {
+        try {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            context.startActivity(i);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 清空应用中的缓存,退出时使用
+     *
+     * @param context
+     */
+    public static void clearCache(final Context context) {
+        clearCacheFolder(context.getCacheDir());
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+            clearCacheFolder(context.getExternalCacheDir());
+        }
+    }
+
+    /**
+     * 清空缓存文件目录
+     */
+    public static int clearCacheFolder(final File dir) {
+
+        int deletedFiles = 0;
+        if (dir != null && dir.isDirectory()) {
+            try {
+                for (File child : dir.listFiles()) {
+
+                    // first delete subdirectories recursively
+                    if (child.isDirectory()) {
+                        deletedFiles += clearCacheFolder(child);
+                    }
+
+                    // then delete the files and subdirectories in this dir
+                    // only empty directories can be deleted, so subdirs have
+                    // been done first
+                    if (child.delete()) {
+                        deletedFiles++;
+                    }
+                }
+            } catch (Exception e) {
+            }
+        }
+        return deletedFiles;
+    }
+
+    //获取本机的手机号码，如果有的话
+    public static String getPhoneNumber(Context context) {
+        TelephonyManager mTelephonyMgr;
+        mTelephonyMgr = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        if (!TextUtils.isEmpty(mTelephonyMgr.getLine1Number())) {
+            String phoneNumber = mTelephonyMgr.getLine1Number();
+            if (phoneNumber.indexOf("1") > -1 && phoneNumber.length() >= 11) {
+                if (!phoneNumber.startsWith("1")) {
+                    String resultPhoneNumber = phoneNumber.substring(phoneNumber.indexOf("1"), phoneNumber.length());
+                    return resultPhoneNumber;
+                } else {
+                    return phoneNumber;
+                }
+            }
+        }
+        return "";
+    }
+
+    /**
+     * 设定view的BG
+     *
+     * @param view
+     * @param drawable
+     */
+    public static void setBackground(View view, Drawable drawable) {
+        if (Build.VERSION.SDK_INT > 15) {
+            view.setBackground(drawable);
+        } else {
+            view.setBackgroundDrawable(drawable);
+        }
+    }
+
+  /* private static Handler loadingHandler = new Handler();//handler定义为静态的
+    private static Dialog loadingDialog;
+
+    public static void showLoadingDialog(Context mContext) {
+//        if (loadingDialog == null)
+        loadingDialog = CustomProgressDialog.createDialog(mContext);
+        loadingDialog.setCancelable(true);
+        loadingHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                // 可能存在某种情况下回收了activity，又重新create，导致无attach view
+                try {
+                    if (loadingDialog != null) {
+                        if (!loadingDialog.isShowing())
+                            loadingDialog.show();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    public static void dismissLoadingDialog() {
+        loadingHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                // 可能存在某种情况下回收了activity，又重新create，导致无attach view
+                try {
+                    if (loadingDialog != null) {
+                        if (loadingDialog.isShowing()) {
+                            loadingDialog.dismiss();
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }*/
+   /* *//**
+     * 强制退出Dialog
+     *//*
+    private static Handler chooseHandler = new Handler();//handler定义为静态的
+    private static Dialog chooseDialog;
+
+    public static void showChooseDialog(Context mContext) {
+        if(chooseDialog == null)
+            chooseDialog = CustomChooseDialog.createDialog(mContext);
+        chooseDialog.setCancelable(true);
+        chooseHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                // 可能存在某种情况下回收了activity，又重新create，导致无attach view
+                try {
+                    if (chooseDialog != null) {
+                        if (!chooseDialog.isShowing())
+                            chooseDialog.show();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    public static void dismissChooseDialog() {
+        chooseHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                // 可能存在某种情况下回收了activity，又重新create，导致无attach view
+                try {
+                    if (chooseDialog != null) {
+                        if (chooseDialog.isShowing()) {
+                            chooseDialog.dismiss();
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }*/
+    /**
+     * SharedPrefManager例子
+     *  SharedPrefManager.saveStringInSharePref(SharedPrefManager.getSystemSharedPref(this),"key","eservice");
+     *  SharedPrefManager.getStringInSharePref(SharedPrefManager.getSystemSharedPref(this),"key","defaultValue");
+     */
+
+    /**
+     * 获取APP版本号
+     */
+    public static String getAppVersion(Context context) {
+        String version = null;
+        PackageManager pm = context.getPackageManager();
+        try {
+            PackageInfo info = pm.getPackageInfo(context.getPackageName(), 0);
+            version = info.versionName;
+            return version;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    public static String getPackageName(Context context) {
+        String currentAppPackageName = "";
+        PackageInfo info;
+        try {
+            info = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+            // 当前应用的版本名称
+            String versionName = info.versionName;
+            // 当前版本的版本号
+            int versionCode = info.versionCode;
+            // 当前版本的包名
+            currentAppPackageName = info.packageName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return currentAppPackageName;
+
+    }
+
+    /**
+     * 获取APP版本码
+     */
+    public static int getVersionCode(Context context) {
+        int versionCode = 0;
+        PackageManager manager = context.getPackageManager();
+        try {
+            PackageInfo info = manager.getPackageInfo(context.getPackageName(), 0);
+            versionCode = info.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return versionCode;
+    }
+
+    /**
+     * 获取设备IMEI序列号
+     */
+    public static String getIMEI(Context context) {
+        String imei = null;
+        TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        imei = telephonyManager.getDeviceId();
+        return imei == null ? "" : imei;
+    }
+
+    /**
+     * 判断网络状况
+     *
+     * @return 0  无网络 ；1 GPRS网络 ；2 WIFI网络； 3 其他网络
+     */
+    public static int checkInternetStatus(Context context) {
+        if (context == null)
+            return 0;
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo info = connectivityManager.getActiveNetworkInfo();
+        if (info == null || !info.isAvailable() || !info.isConnected()) {
+            return 0;
+        } else if (info.getType() == ConnectivityManager.TYPE_MOBILE) {
+            return 1;
+        } else if (info.getType() == ConnectivityManager.TYPE_WIFI) {
+            return 2;
+        } else {
+            return 3;
+        }
+    }
+
+
+    public static void callNumber(Context context, String phoneNumber) {
+        if (phoneNumber != null && !"".equals(phoneNumber) && !"null".equals(phoneNumber)) {
+            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber));
+
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            //ServiceApplication.getInstance().startActivity(intent);
+            context.startActivity(intent);
+            //startActivity(intent);
+        }
+
+    }
+
+    /**
+     * 退出登录，跳转到登录
+     */
+    public static void exitToLogin(Context context) {
+        //清理登录状态
+        SharedPrefManager.clearSharedPref(SharedPrefManager.getSystemSharedPref(context.getApplicationContext()));
+        ActivityCollector.finishAll();
+        LoginActivity.openLoginActivity(context, false);
+    }
+
+    /**
+     * 判断是否登录
+     *
+     * @param context
+     * @return
+     */
+    public static boolean isLogin(Context context) {
+        SharedPreferences sharedPreferences = SharedPrefManager.getSystemSharedPref(context);
+        return sharedPreferences.getBoolean(SharedPrefManager.LOGIN_STATUS, false);
+    }
+
+    /**
+     * 判断应用是否已经启动
+     *
+     * @param context     一个context
+     * @param packageName 要判断应用的包名
+     * @return boolean
+     */
+    public static boolean isAppAlive(Context context, String packageName) {
+        ActivityManager activityManager =
+                (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> processInfos
+                = activityManager.getRunningAppProcesses();
+        for (int i = 0; i < processInfos.size(); i++) {
+            if (processInfos.get(i).processName.equals(packageName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 打开图片挑选图片
+     */
+    public static void openPictureSelect(Activity context, int requestCode) {
+        Intent intentPic = null;
+
+        intentPic = new Intent(
+                Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        context.startActivityForResult(intentPic, requestCode);
+
+    }
+
+    /**
+     * 打开照相机照相
+     */
+    public static Uri openCamera(Activity context, int requestCode) {
+        Intent intentCamera = new Intent("android.media.action.IMAGE_CAPTURE");
+//        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+//            File fileExter = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
+        File fileExter = FileUtils.getPicFile(context);
+        Uri uri = null;
+        if (fileExter.exists()) {
+//            File fileApp = new File(fileExter, "HomeDelivery");
+//            fileApp.mkdirs();
+            File imgFile = new File(fileExter, new Date().getTime() + ".jpg");
+            try {
+                imgFile.createNewFile();
+                uri = Uri.fromFile(imgFile);
+                intentCamera.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+                context.startActivityForResult(intentCamera, requestCode);
+                return uri;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Toast.makeText(context, "文件夹不存在在", Toast.LENGTH_SHORT).show();
+        }
+        return uri;
+    }
+
+    /**
+     * 压缩图片并展示缩略图
+     */
+    public static void displayCompressedBitmap(Context context, ImageView imageView, String path) {
+        File imgFile = new File(path);
+        int degree = getRotation(path);
+        if (imgFile.exists()) {
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
+            BitmapFactory.decodeFile(imgFile.getPath(), options);
+            int width = options.outWidth;
+            int height = options.outWidth;
+            int sampleSize = 1;
+            if (width > height && width > 100) {
+                sampleSize = (int) ((float) width / 100);
+            } else if (width <= height && height > 100) {
+                sampleSize = (int) ((float) height / 100);
+            }
+            options.inSampleSize = sampleSize < 0 ? 1 : sampleSize;
+            options.inJustDecodeBounds = false;
+            options.inPreferredConfig = Bitmap.Config.RGB_565;
+            Bitmap bitmap = BitmapFactory.decodeFile(imgFile.getPath(), options);
+            Matrix matrix = new Matrix();
+            matrix.setRotate(degree);
+            bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+            imageView.setImageBitmap(bitmap);
+        } else {
+            Toast.makeText(context, "文件不存在", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+    public static String getPath(final Context context, final Uri uri) {
+
+        final boolean isKitKat = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
+
+        // DocumentProvider
+        if (isKitKat && DocumentsContract.isDocumentUri(context, uri)) {
+            // ExternalStorageProvider
+            if (isExternalStorageDocument(uri)) {
+                final String docId = DocumentsContract.getDocumentId(uri);
+                final String[] split = docId.split(":");
+                final String type = split[0];
+
+                if ("primary".equalsIgnoreCase(type)) {
+                    return Environment.getExternalStorageDirectory() + "/" + split[1];
+                }
+
+                // TODO handle non-primary volumes
+            }
+            // DownloadsProvider
+            else if (isDownloadsDocument(uri)) {
+
+                final String id = DocumentsContract.getDocumentId(uri);
+                final Uri contentUri = ContentUris.withAppendedId(
+                        Uri.parse("content://downloads/public_downloads"), Long.valueOf(id));
+
+                return getDataColumn(context, contentUri, null, null);
+            }
+            // MediaProvider
+            else if (isMediaDocument(uri)) {
+                final String docId = DocumentsContract.getDocumentId(uri);
+                final String[] split = docId.split(":");
+                final String type = split[0];
+
+                Uri contentUri = null;
+                if ("image".equals(type)) {
+                    contentUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+                } else if ("video".equals(type)) {
+                    contentUri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
+                } else if ("audio".equals(type)) {
+                    contentUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+                }
+
+                final String selection = "_id=?";
+                final String[] selectionArgs = new String[]{
+                        split[1]
+                };
+
+                return getDataColumn(context, contentUri, selection, selectionArgs);
+            }
+        }
+        // MediaStore (and general)
+        else if ("content".equalsIgnoreCase(uri.getScheme())) {
+
+            // Return the remote address
+            if (isGooglePhotosUri(uri))
+                return uri.getLastPathSegment();
+
+            return getDataColumn(context, uri, null, null);
+        }
+        // File
+        else if ("file".equalsIgnoreCase(uri.getScheme())) {
+            return uri.getPath();
+        }
+
+        return null;
+    }
+
+    /**
+     * Get the value of the data column for this Uri. This is useful for
+     * MediaStore Uris, and other file-based ContentProviders.
+     *
+     * @param context       The context.
+     * @param uri           The Uri to query.
+     * @param selection     (Optional) Filter used in the query.
+     * @param selectionArgs (Optional) Selection arguments used in the query.
+     * @return The value of the _data column, which is typically a file path.
+     */
+    public static String getDataColumn(Context context, Uri uri, String selection,
+                                       String[] selectionArgs) {
+
+        Cursor cursor = null;
+        final String column = "_data";
+        final String[] projection = {
+                column
+        };
+
+        try {
+            cursor = context.getContentResolver().query(uri, projection, selection, selectionArgs,
+                    null);
+            if (cursor != null && cursor.moveToFirst()) {
+                final int index = cursor.getColumnIndexOrThrow(column);
+                return cursor.getString(index);
+            }
+        } finally {
+            if (cursor != null)
+                cursor.close();
+        }
+        return null;
+    }
+
+
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is ExternalStorageProvider.
+     */
+    public static boolean isExternalStorageDocument(Uri uri) {
+        return "com.android.externalstorage.documents".equals(uri.getAuthority());
+    }
+
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is DownloadsProvider.
+     */
+    public static boolean isDownloadsDocument(Uri uri) {
+        return "com.android.providers.downloads.documents".equals(uri.getAuthority());
+    }
+
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is MediaProvider.
+     */
+    public static boolean isMediaDocument(Uri uri) {
+        return "com.android.providers.media.documents".equals(uri.getAuthority());
+    }
+
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is Google Photos.
+     */
+    public static boolean isGooglePhotosUri(Uri uri) {
+        return "com.google.android.apps.photos.content".equals(uri.getAuthority());
+    }
+
+    /**
+     * 旧的方式获取图片路径
+     *
+     * @param context
+     * @param data
+     * @return
+     */
+    public static String selectImage(Context context, Intent data) {
+        Uri selectedImage = data.getData();
+        if (selectedImage != null) {
+            String uriStr = selectedImage.toString();
+            String path = uriStr.substring(10, uriStr.length());
+            if (path.startsWith("com.sec.android.gallery3d")) {
+                return null;
+            }
+        }
+        String[] filePathColumn = {MediaStore.Images.Media.DATA};
+        Cursor cursor = context.getContentResolver().query(selectedImage, filePathColumn, null, null, null);
+        cursor.moveToFirst();
+        int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+        String picturePath = cursor.getString(columnIndex);
+        cursor.close();
+        return picturePath;
+    }
+
+    /**
+     * 获取token
+     */
+    public static String getToken(Context context) {
+        SharedPreferences sharedPreferences = SharedPrefManager.getSystemSharedPref(context);
+        String token = sharedPreferences.getString(SharedPrefManager.LOGIN_TOKEN, "");
+        return token;
+    }
+
+    /**
+     * 获取userCode
+     */
+    public static String getUserCode(Context context) {
+        SharedPreferences sharedPreferences = SharedPrefManager.getSystemSharedPref(context);
+        String userCode = sharedPreferences.getString(SharedPrefManager.LOGIN_USER_CODE, "");
+        return userCode;
+    }
+
+    public static boolean checkCameraAndFilePermission(Activity activity, int requestCode) {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(activity, Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA, Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS, Manifest.permission.WRITE_EXTERNAL_STORAGE}, requestCode);
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 提示服务器异常
+     */
+    public static void showServerError(Context context) {
+        if (context == null)
+            return;
+        Toast.makeText(context, R.string.text_server_error, Toast.LENGTH_SHORT).show();
+    }
+
+    public static void showError(Context context, String msg) {
+        if (context == null)
+            return;
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * 复制文本
+     *
+     * @param mOrderID
+     */
+    public static void copyStr(Context context, String mOrderID) {
+        ClipboardManager clipManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+        clipManager.setText(mOrderID);
+        Toast.makeText(context, R.string.text_orderid_copied, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * 计算相片旋转角度
+     */
+    public static int getRotation(String filePath) {
+        int degree = 0;
+        try {
+            ExifInterface exifInterface = new ExifInterface(filePath);
+            int oreitation = exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
+            switch (oreitation) {
+                case ExifInterface.ORIENTATION_ROTATE_90:
+                    degree = 90;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_180:
+                    degree = 180;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_270:
+                    degree = 270;
+                    break;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return degree;
+    }
+
+    public static void openLocationService(Context context) {
+        Intent intent = new Intent(context, LenovoLocService.class);
+        context.startService(intent);
+    }
+
+    public static boolean isServiceWork(Context mContext, String serviceName) {
+        boolean isWork = false;
+        ActivityManager myAM = (ActivityManager) mContext
+                .getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningServiceInfo> myList = myAM.getRunningServices(40);
+        if (myList.size() <= 0) {
+            return false;
+        }
+        for (int i = 0; i < myList.size(); i++) {
+            String mName = myList.get(i).service.getClassName().toString();
+            if (mName.equals(serviceName)) {
+                isWork = true;
+                break;
+            }
+        }
+        return isWork;
+    }
+
+    /**
+     * 写入文件的方法
+     */
+    public static void WriteTxtFile(String content) {
+        String strFilePath = Environment.getExternalStorageDirectory() + "/LenovoLocation.txt";
+        //每次写入时，都换行写
+        Date date = new Date(System.currentTimeMillis());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String time = sdf.format(date);
+        content = time + content + "\n";
+        try {
+            File file = new File(strFilePath);
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter writer = new FileWriter(file, true);
+            writer.write(content);
+            writer.flush();
+            writer.close();
+        } catch (Exception e) {
+        }
+    }
+
+    public static void syncFailedPic(final Context context, final ImageView mImage, String fileId, final String filePath) {
+        if (context != null && Utils.checkInternetStatus(context) != 0) {
+            String suffix = null;
+            if (!TextUtils.isEmpty(filePath)) {
+                suffix = filePath.substring(filePath.lastIndexOf(".") + 1);
+                if (TextUtils.isEmpty(suffix))
+                    suffix = "jpg";
+            } else {
+                suffix = "jpg";
+            }
+            String userCode = Utils.getUserCode(context);
+            HashMap<String, String> params = new HashMap();
+            params.put("user_code", userCode);
+            params.put("file_id", fileId);
+            params.put("suffix", suffix);
+
+            HttpClientManager.post(NetInterface.SYNC_FAILED_PIC + Utils.getToken(context), params, new JsonHttpCallBack<SyncPicData>() {
+                @Override
+                public void onSuccess(SyncPicData result) {
+                    if (result != null && result.getData() != null && result.getStatus_code().equals("200")) {
+                        String fileUrl = result.getData().getPath();
+                        Utils.loadImageWithGlide(context, fileUrl, mImage, R.drawable.default_load_img);
+                    } else {
+                        Utils.loadImageWithGlide(context, filePath, mImage, R.drawable.default_load_img);
+                    }
+                }
+
+                @Override
+                public void onError(Exception e) {
+
+                }
+            });
+
+        }
+    }
+}

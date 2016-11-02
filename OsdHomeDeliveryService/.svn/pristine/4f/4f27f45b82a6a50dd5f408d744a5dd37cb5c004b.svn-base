@@ -1,0 +1,150 @@
+package com.lenovo.csd.eservice.cache;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.text.TextUtils;
+
+/**
+ * sharedprefrence管理类<br/>
+ * 获取sharedprefrence<br/>
+ * 清空sharedprefrence数据<br/>
+ * 
+ * @author wangxunlong
+ *
+ */
+public class SharedPrefManager {
+    private static final String SHAREDPREF_SETTING = "SHAREDPREF_SETTING";
+    public static final String LOGIN_USER_CODE = "user_code";
+    public static final String LOGIN_USER_NAME = "user_name";
+    public static final String LOGIN_USER_MOBILE = "user_mobile";
+    public static final String LOGIN_STATION_NAME = "station_name";
+    public static final String LOGIN_POSITION_NAME = "position_name";
+    public static final String LOGIN_QRCODE_IMAGE = "qrcode_image";
+    public static final String LOGIN_HEAD_IMAGE = "head_image";
+    public static final String LOGIN_SET_TIME = "set_time";
+    public static final String LOGIN_TOKEN = "token";
+    public static final String LAST_FOREGROUND_TIME = "last_foregound_time";
+    public static final String LOGIN_STATUS = "login_status";
+    public static final String APP_FIRST_OPEN = "app_first_open";
+
+    /**
+     * 根据名字获取sharedprefrence
+     * 
+     * @param context
+     * @param sharedPrefName
+     * @return
+     */
+    private static SharedPreferences getSharedPreferences(Context context, String sharedPrefName) {
+        if (context == null || TextUtils.isEmpty(sharedPrefName)) {
+            return null;
+        }
+        SharedPreferences sharedPreferences = context.getSharedPreferences(sharedPrefName, Context.MODE_PRIVATE);
+        return sharedPreferences;
+    }
+
+    /**
+     * 获取应用设置的相关sharedprefrence
+     * 
+     * @param context
+     * @return
+     */
+    public static SharedPreferences getSystemSharedPref(Context context) {
+        return getSharedPreferences(context, SHAREDPREF_SETTING);
+    }
+
+    public static void saveStringInSharePref(SharedPreferences preferences, String key, String value) {
+        if (preferences == null || TextUtils.isEmpty(key)) {
+            return;
+        }
+        Editor edit = preferences.edit();
+        edit.putString(key, value);
+        edit.apply();
+    }
+
+    public static String getStringInSharePref(SharedPreferences preferences, String key, String def) {
+        if (preferences == null || TextUtils.isEmpty(key)) {
+            return null;
+        }
+        return preferences.getString(key, def);
+    }
+
+    public static void saveIntInSharePref(SharedPreferences preferences, String key, int value) {
+        if (preferences == null || TextUtils.isEmpty(key)) {
+            return;
+        }
+        Editor edit = preferences.edit();
+        edit.putInt(key, value);
+        edit.commit();
+    }
+ 
+    public static void saveFloatInSharePref(SharedPreferences preferences, String key, float value) {
+        if (preferences == null || TextUtils.isEmpty(key)) {
+            return;
+        }
+        Editor edit = preferences.edit();
+        edit.putFloat(key, value);
+        edit.commit();
+    }
+
+    public static void saveBooleanInSharePref(SharedPreferences preferences, String key, boolean value) {
+        if (preferences == null || TextUtils.isEmpty(key)) {
+            return;
+        }
+        Editor edit = preferences.edit();
+        edit.putBoolean(key, value);
+        edit.commit();
+    }
+
+    /**
+     * 根据给定的sharedprefrence key获取值
+     * 
+     * @param sharedPref
+     * @param key
+     * @param defValue
+     * @return
+     */
+    public static boolean getBoolean(SharedPreferences sharedPref, String key, boolean defValue) {
+        if (sharedPref == null || TextUtils.isEmpty(key)) {
+            return defValue;
+        }
+        return sharedPref.getBoolean(key, defValue);
+    }
+    public static int getInt(SharedPreferences preferences, String key, int defValue) {
+        if (preferences == null || TextUtils.isEmpty(key)) {
+            return defValue;
+        }
+        return preferences.getInt(key, defValue);
+    }
+
+    public static long getLong(SharedPreferences preferences, String key, long defValue) {
+    	 if (preferences == null || TextUtils.isEmpty(key)) {
+            return defValue;
+        }
+        return preferences.getLong(key, defValue);
+    }
+
+    public static void saveLong(SharedPreferences preferences, String key, long value) {
+        if (preferences == null) {
+            return;
+        }
+        Editor edit = preferences.edit();
+        edit.putLong(key, value);
+        edit.commit();
+    }
+
+    /**
+     * 清空
+     * 
+     * @param preferences
+     */
+    public static void clearSharedPref(SharedPreferences preferences) {
+        if (preferences == null) {
+            return;
+        }
+        Editor edit = preferences.edit();
+        edit.clear();
+        edit.putBoolean(APP_FIRST_OPEN,false);
+        edit.commit();
+    }
+}

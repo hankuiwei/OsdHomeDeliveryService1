@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_hintdialog_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.lenovo.csd.eservice.fragment.HintFragment">
+
+
+    <TextView
+        android:id="@+id/text_hintTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_42dp"
+        android:gravity="center"
+        android:textColor="@color/red_e1524c"
+        android:textSize="@dimen/text_23sp" />
+
+    <TextView
+        android:id="@+id/text_errorMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:paddingBottom="@dimen/layout_42dp"
+        android:paddingLeft="@dimen/layout_25dp"
+        android:paddingRight="@dimen/layout_25dp"
+        android:paddingTop="@dimen/layout_42dp"
+        android:textColor="@color/gray_666666"
+        android:textSize="@dimen/text_20sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_hintContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/layout_42dp"
+        android:layout_marginLeft="@dimen/layout_25dp"
+        android:layout_marginRight="@dimen/layout_25dp"
+        android:layout_marginTop="@dimen/layout_25dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_hintBtns"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancelAction"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_70dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_bg_gray_rect_btn"
+            android:gravity="center"
+            android:textColor="@color/white_ffffff"
+            android:textSize="@dimen/text_20sp" />
+
+        <ImageView
+            android:layout_width="@dimen/line_1dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btn_confirmAction"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_70dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_bg_rect_redbtn"
+            android:gravity="center"
+            android:textColor="@color/white_ffffff"
+            android:textSize="@dimen/text_20sp" />
+    </LinearLayout>
+</LinearLayout>

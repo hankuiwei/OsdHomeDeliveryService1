@@ -1,0 +1,102 @@
+package com.lenovo.csd.eservice.http;
+
+/**
+ * Created by shengtao
+ * Date:2016/7/21
+ * Time:11:03
+ */
+public class NetInterface {
+    //主机IP
+    public static final String HOST_TEST = "http://10.96.173.141:8080/api/v1";
+//    public static final String HOST_TEST = "http://appapi.lenovo.com.cn/api/v1";
+
+
+    public static final String HOST_URL = "http://lenovo.com/api/v1/";
+    //三方点评
+    public static final String HOST_COMMENT = "http://dianping.lenovo.com.cn/";
+    //登录接口
+    public static final String URL_LOGIN = HOST_TEST + "/login";
+    //app检测更新地址
+    public static final String URL_APP_UPDATE = "http://appapi.lenovo.com.cn/update.xml";
+    //设置提醒时间
+    public static final String SET_TIME = HOST_TEST + "/settime";
+    //获取点评数量
+    public static final String GETREVIEWCOUNT = HOST_COMMENT + "Handles/MySO.ashx";
+    //获取评价列表
+    public static final String GETREVIEWLIST = HOST_COMMENT + "Pages/PC/ajax.aspx";
+    //获取工单列表
+    public static final String GET_ORDERSLIST = HOST_TEST + "/getorderlist";
+    //联系客户结果
+    public static final String GET_CONNECTT0_CUSTOMER = HOST_TEST + "/putcontactresult?";
+    //获取客户详细信息
+    public static final String GET_USERINFO_DETAIL = HOST_TEST + "/getorderdetailcustomer?";
+    //工单步骤处理
+    public static final String GET_NEXT_STEP = HOST_TEST + "/putmaintenance?";
+    //获取工单任务
+    public static final String GET_ORDER_TASK = HOST_TEST + "/ordertasksources?";
+    //获取工单任务历史
+    public static final String GET_ORDER_TASK_HIS = HOST_TEST + "/ordertaskhistory?";
+    //工单任务撤销
+    public static final String REVOKETASK = HOST_TEST + "/revoketask";
+    //获取工单详情
+    public static final String GET_ORDER_DETAIL = HOST_TEST + "/getorderdetail?";
+    //获取备件信息
+    public static final String GET_BACKUP_PIECES = HOST_TEST + "/getborroworderinfo?";
+    //初始化换件信息
+    public static final String INIT_CHANGE = HOST_TEST + "/change/init";
+    //获取添加换件的装箱单列表
+    public static final String GET_CHANGE_BOXS = HOST_TEST + "/change/boxs";
+    //提交换件
+    public static final String SUBMIT_CHANGE = HOST_TEST + "/change/submit";
+    //初始化非换件信息
+    public static final String INIT_UNCHANGE = HOST_TEST + "/unchange/sources";
+    //添加非换件
+    public static final String ADD_UNCHANGE = HOST_TEST + "/unchange/add";
+    //已上传附件（工单）
+    public static final String GET_ATTACHMENTLIST_INIT = HOST_TEST + "/attachment/list/saved/";
+    //已上传附件（工程师）
+    public static final String GET_USERUPLOAD_ATTACHMENTS = HOST_TEST + "/attachment/list/saved/";
+    //工单附件类型
+    public static final String GET_ATTACHMENT_TYPELIST = HOST_TEST + "/attachment/init/";
+    //收集用户信息
+    public static final String COLLECTUSERINFO = "http://weixin.lenovo.com.cn/weixin/index.php/AppBox/Issues";
+    //获取备件列表
+    public static final String GET_PARTS_LIST = HOST_TEST + "/getborroworderinfolist?";
+    //获取客户工单咨询记录
+    public static final String GET_ORDER_CONSULTRECORD = HOST_TEST +"/getsritems?token=";
+    //获取主机信息
+    public static final String GET_MACHINE_INIFO = HOST_TEST + "/getproductinfo?";
+    //获取装箱单信息
+    public static final String GET_ORDERBOX_INFO = HOST_TEST + "/getmaterialinfo?";
+    //附件上传
+    public static final String UPLOAD_ATTACHMENT_URL = HOST_TEST + "/attachment/uploadfile?";
+    //工单详情全部信息
+    public static final String ORDER_DETAIL_ALLINFO = HOST_TEST + "/getorderdetail?";
+    //意见反馈
+    public static final String FADE_BACK_URL = HOST_TEST + "/feedback?";
+    //意见反馈图片上传
+    public static final String FADE_BACKPIC_URL = HOST_TEST + "/upload?";
+    //获取知识库链接
+    public static final String KNOWLEDGE_DB_URL = HOST_TEST + "/know/";
+    //地理位置上传
+    public static final String UPLOAD_LOCATION = HOST_TEST + "/location/upload?";
+    //删除换件信息接口
+    public static final String DELETE_CHANGEPIECE = HOST_TEST + "/change/del?token=";
+    //删除非换件接口
+    public static final String DELETE_UNCHANGEPIECE = HOST_TEST + "/unchange/del?token=";
+    //获取历史换件信息记录
+    public static final String GET_CHANGEPIECE_RECORD = HOST_TEST + "/change/histories?";
+    //绑定工程师和个推 -
+    public static final String BINDING_USERCODE_AND_PUSH_CID = HOST_TEST + "/client?token=";
+    //单独拉取二维码接口
+    public static final String GET_QRCODE_URL = HOST_TEST + "/order/qrcode/";
+
+    //实时上传地理位置
+    public static final String REPORT_LOCATION_URL = "http://locationapi.lenovo.com.cn/api/v1/location/upload?";
+
+    //同步加载失败的图片
+    public static final String SYNC_FAILED_PIC = HOST_TEST + "/attachment/savefile?token=";
+
+    //获得腾讯地理位置坐标
+    public static final String GET_TENCENT_LOCATION = "http://apis.map.qq.com/ws/coord/v1/translate?key=VWGBZ-4SYKU-JKAVR-BKELY-IMEN5-KHBEZ&type=3&locations=";
+}

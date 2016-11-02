@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black_373b3e"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mine_head"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:background="#373B3E">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/mine_setting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_30sp" />
+
+        <LinearLayout
+            android:id="@+id/mine_title_Lin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_bg_draweritem"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/layout_25dp"
+            android:paddingStart="@dimen/layout_25dp"
+            android:paddingRight="@dimen/layout_25dp"
+            android:paddingEnd="@dimen/layout_25dp">
+
+            <ImageView
+                android:layout_width="@dimen/layout_15dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="0dp"
+                android:paddingLeft="@dimen/layout_10dp"
+                android:paddingRight="0dp"
+                android:paddingStart="@dimen/layout_10dp"
+                android:text="@string/mine_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_23sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/mine_lebel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_20dp"
+                    android:layout_marginRight="@dimen/layout_20dp"
+                    android:layout_marginTop="@dimen/layout_47dp"
+                    android:text="@string/mine_hint_title"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_23sp" />
+
+                <TextView
+                    android:id="@+id/mine_line_tv1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/mine_lebel"
+                    android:layout_marginTop="@dimen/layout_25dp"
+                    android:background="#cccccc" />
+
+                <LinearLayout
+                    android:id="@+id/mine_remind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mine_line_tv1"
+                    android:layout_marginTop="@dimen/layout_15dp"
+                    android:layout_marginBottom="@dimen/layout_15dp"
+                    android:layout_marginLeft="@dimen/layout_20dp"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <!-- mine_remind  android:layout_marginRight="@dimen/layout_20dp"-->
+
+                    <TextView
+                        android:id="@+id/textSpinnerTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/layout_10dp"
+                        android:text="@string/text_choose_please"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/text_18sp" />
+
+                    <Spinner
+                        android:id="@+id/spinner_operate"
+                        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/layout_60dp"
+                        android:layout_weight="1.0"
+                        android:layout_marginBottom="1px"
+                        android:layout_marginTop="1px"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/layout_20dp"
+                        android:paddingRight="@dimen/layout_10dp"
+                        android:popupBackground="@android:color/transparent" />
+                    <!--
+                    <ImageView
+                        android:layout_width="@dimen/layout_10dp"
+                        android:layout_height="@dimen/layout_18dp"
+                        android:layout_marginRight="@dimen/layout_10dp"
+                        android:background="@drawable/icon_foreward" />
+                        -->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/mine_line_tv2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/mine_remind"
+                    android:background="#cccccc" />
+
+                <Button
+                    android:id="@+id/mine_save_btn"
+                    style="?android:borderlessButtonStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/layout_70dp"
+                    android:layout_below="@id/mine_line_tv2"
+                    android:layout_marginLeft="@dimen/layout_20dp"
+                    android:layout_marginRight="@dimen/layout_20dp"
+                    android:layout_marginTop="@dimen/layout_79dp"
+                    android:background="@drawable/selector_bg_redbtn"
+                    android:text="@string/mine_save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

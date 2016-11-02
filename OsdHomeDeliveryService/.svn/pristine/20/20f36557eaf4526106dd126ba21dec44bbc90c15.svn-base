@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_4dpcorner_white_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/layout_5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/layout_5dp"
+        android:text="@string/text_choose_please"
+        android:textColor="@color/gray_666666"
+        android:textSize="@dimen/text_18sp" />
+
+    <TextView
+        android:id="@+id/textItemDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:paddingBottom="@dimen/layout_15dp"
+        android:paddingLeft="@dimen/layout_10dp"
+        android:paddingRight="@dimen/layout_10dp"
+        android:paddingTop="@dimen/layout_15dp"
+        android:textColor="@color/gray_666666"
+        android:textSize="@dimen/text_18sp" />
+
+    <TextView
+        android:id="@+id/textItemTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:paddingBottom="@dimen/layout_15dp"
+        android:paddingLeft="@dimen/layout_10dp"
+        android:paddingRight="@dimen/layout_10dp"
+        android:paddingTop="@dimen/layout_15dp"
+        android:textColor="@color/gray_666666"
+        android:textSize="@dimen/text_18sp" />
+</LinearLayout>

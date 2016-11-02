@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/layout_5dp"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioReasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:textSize="@dimen/text_18sp"
+            android:textColor="@drawable/selector_text_color_whitered"
+            android:text="@string/text_reason_user"
+            android:id="@+id/radioUserReason"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_60dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_bg_redwhite_checkedstate"
+            android:button="@null"
+            android:gravity="center" />
+
+        <RadioButton android:textSize="@dimen/text_18sp"
+            android:textColor="@drawable/selector_text_color_whitered"
+            android:text="@string/text_reason_station"
+            android:id="@+id/radioStationReason"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_60dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_bg_redwhite_checkedstate"
+            android:button="@null"
+            android:gravity="center" />
+
+        <RadioButton
+            android:textSize="@dimen/text_18sp"
+            android:textColor="@drawable/selector_text_color_whitered"
+            android:text="@string/text_reason_parts"
+            android:id="@+id/radioPartsReason"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_60dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_bg_redwhite_checkedstate"
+            android:button="@null"
+            android:gravity="center" />
+    </RadioGroup>
+</LinearLayout>

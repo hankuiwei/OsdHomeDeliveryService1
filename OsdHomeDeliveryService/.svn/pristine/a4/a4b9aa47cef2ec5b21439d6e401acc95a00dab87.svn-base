@@ -1,0 +1,33 @@
+package com.lenovo.csd.eservice.adapter;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.ViewGroup;
+
+/**
+ * Created by 彤 on 2016/8/18.
+ */
+public class ContactRecordAdapter extends RecyclerView.Adapter<ContactRecordAdapter.RecordHolder> {
+
+    @Override
+    public RecordHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return null;
+    }
+
+    @Override
+    public void onBindViewHolder(RecordHolder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
+
+    class RecordHolder extends RecyclerView.ViewHolder {
+
+        public RecordHolder(View itemView) {
+            super(itemView);
+        }
+    }
+}

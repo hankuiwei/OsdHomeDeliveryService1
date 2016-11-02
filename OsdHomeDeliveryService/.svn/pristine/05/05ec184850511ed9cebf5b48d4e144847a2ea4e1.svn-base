@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lenovo.csd.eservice">
+
+    <!-- 定位服务持续开启 -->
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- iBeancon功能与个推3.0电子围栏功能所需要的权限为非必需的可选择权限，可以选择性配置，以便使用个推3.0电子围栏功能 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.${GETUI_APP_ID}" />
+    <!-- 替换为第三方应用的包名 -->
+    <permission
+        android:name="getui.permission.GetuiService.${GETUI_APP_ID}"
+        android:protectionLevel="normal" />
+    <!-- 替换为第三方应用的包名 -->
+    <!-- 个推SDK权限配置结束 -->
+    <!-- 弹框权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 百度crab权限开始 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 仅debug模式下dump OOM文件需要以下权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 记录logcat日志功能 所需的权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 百度crab权限结束 -->
+    <!--zxing -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
+    <!-- baidu map -->
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 摄影机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 摄影机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- baidu map -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <!-- baidu map -->
+    <application
+        android:name=".ServiceApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_applogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+            将HomeActivity的launchMode设置成SingleTask, 或者在下面flag中加上Intent.FLAG_CLEAR_TOP,
+            如果Task栈中有HomeActivity的实例，就会把它移到栈顶，把在它之上的Activity都清理出栈，
+            如果Task栈不存在HomeActivity实例，则在栈顶创建
+            mainIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        -->
+        <activity
+            android:name=".activity.HomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|layoutDirection"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MyQRCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myQR_code_activity_dialog" />
+        <activity
+            android:name=".activity.MyCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MySettingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.CollectUserinfoActivity" />
+
+        <service
+            android:name=".services.AppUpdateService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.OperateOrderActivity"
+            android:configChanges="orientation|keyboardHidden|layoutDirection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FadeBackActivity"
+            android:configChanges="orientation|keyboardHidden|layoutDirection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderAttachmentActivity"
+            android:configChanges="orientation|keyboardHidden|layoutDirection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MoreAboutCustomActivity"
+            android:configChanges="orientation|keyboardHidden|layoutDirection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MoreAboutMachineActivity"
+            android:configChanges="orientation|keyboardHidden|layoutDirection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TechRelatedActivity"
+            android:configChanges="orientation|keyboardHidden|layoutDirection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddAttachmentActivity"
+            android:configChanges="orientation|keyboardHidden|layoutDirection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyAttachments"
+            android:configChanges="orientation|keyboardHidden|layoutDirection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrdertaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddChangeRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddUnChangeRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePackingListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePackingListActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".zxing.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- 个推receiver -->
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name=".push.PushBoradCastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".push.SystemReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!--  &lt;!&ndash; 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 &ndash;&gt;-->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.DATA_ACTIVITY" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.CONFIGURATION_CHANGED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 百度定位 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.LoadLocatService"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="mUP5eog4Rx4CjmbRtgog3QWb2XYm4g8R" />
+        <!-- http://lbsyun.baidu.com/apiconsole/key -->
+        <!--  -->
+        <service
+            android:name=".schedule.AlarmScheduleService"
+            android:exported="false" />
+        <service
+            android:name=".schedule.JobScheduleService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".activity.AboutActivity" />
+
+        <service
+            android:name=".services.LenovoLocService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

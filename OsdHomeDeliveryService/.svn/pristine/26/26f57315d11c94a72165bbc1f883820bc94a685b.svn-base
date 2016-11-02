@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:background="@color/black_373b3e"
+        android:text="@string/orders_title"
+        android:textSize="@dimen/text_30sp"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+    <!--<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_10dp"
+        android:background="@color/color_F4F4F4"
+        android:orientation="horizontal"/>-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_70dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:id="@+id/orders_unfinished_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/orders_unfinished_linear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_2dp"
+                android:background="@color/red_E47B78"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_orderUnF"
+                    android:layout_width="@dimen/layout_20dp"
+                    android:layout_height="@dimen/layout_20dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_waiting_selected" />
+                <TextView
+                    android:id="@+id/Txt_orders_unfinished"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/layout_10dp"
+                    android:layout_toRightOf="@id/img_orderUnF"
+                    android:text="@string/orders_unfinished"
+                    android:textColor="@color/red_E47B78"
+                    android:textSize="@dimen/text_20sp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/orders_finished_bg"
+            android:background="@drawable/shape_0dpcorner_gray_bg">
+            <TextView
+                android:id="@+id/orders_finished_linear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_2dp"
+                android:background="@color/gray_cccccc"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img_orderF"
+                android:layout_width="@dimen/layout_20dp"
+                android:layout_height="@dimen/layout_20dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_success_unselected" />
+            <TextView
+                android:id="@+id/Txt_orders_finished"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img_orderF"
+                android:text="@string/orders_finished"
+                android:textColor="@color/gray_cccccc"
+                android:textSize="@dimen/text_20sp"/>
+        </RelativeLayout>
+            </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/Order_Pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,889 @@
+package com.lenovo.csd.eservice.entity.base;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.util.ArrayList;
+
+/**
+ * Created by 彤 on 2016/8/25.
+ * 工单详情的所有信息
+ */
+public class OrderDetailAllData extends BaseData {
+    private OrderBaseData data;
+
+    public OrderBaseData getData() {
+        return data;
+    }
+
+    public void setData(OrderBaseData data) {
+        this.data = data;
+    }
+
+    //工单详情基础数据
+    public class OrderBaseData {
+        private ArrayList<AttachType> attachment_types;
+        private OrderDetailBean order_detail;
+        private OrderOperation order_operations;
+        private ArrayList<BackupPiece> borrow_order_info;
+        private String qrcode_url;//邀评二维码
+
+        public ArrayList<AttachType> getAttachment_types() {
+            return attachment_types;
+        }
+
+        public void setAttachment_types(ArrayList<AttachType> attachment_types) {
+            this.attachment_types = attachment_types;
+        }
+
+        public OrderDetailBean getOrder_detail() {
+            return order_detail;
+        }
+
+        public void setOrder_detail(OrderDetailBean order_detail) {
+            this.order_detail = order_detail;
+        }
+
+        public OrderOperation getOrder_operations() {
+            return order_operations;
+        }
+
+        public void setOrder_operations(OrderOperation order_operations) {
+            this.order_operations = order_operations;
+        }
+
+        public ArrayList<BackupPiece> getBorrow_order_info() {
+            return borrow_order_info;
+        }
+
+        public void setBorrow_order_info(ArrayList<BackupPiece> borrow_order_info) {
+            this.borrow_order_info = borrow_order_info;
+        }
+
+        public String getQrcode_url() {
+            return qrcode_url;
+        }
+
+        public void setQrcode_url(String qrcode_url) {
+            this.qrcode_url = qrcode_url;
+        }
+    }
+
+    //附件类型
+    public class AttachType {
+        private String id;
+        private String name;
+        private String task_back;
+        private String task_remark;
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getTask_back() {
+            return task_back;
+        }
+
+        public void setTask_back(String task_back) {
+            this.task_back = task_back;
+        }
+
+        public String getTask_remark() {
+            return task_remark;
+        }
+
+        public void setTask_remark(String task_remark) {
+            this.task_remark = task_remark;
+        }
+    }
+
+    //工单的操作权限
+    public class OrderOperation {
+        private int task_approve;
+        private int task_service_complete;
+        private int reservation_record_view;
+        private int reservation_subscribe_add;
+        private int reservation_change_add;
+        private int reservation_unchange_add;
+        private int attachment_normal_upload;
+        private int attachment_normal_delete;
+        private int attachment_normal_view;
+        private int attachment_invoice_upload;
+
+        public int getTask_approve() {
+            return task_approve;
+        }
+
+        public void setTask_approve(int task_approve) {
+            this.task_approve = task_approve;
+        }
+
+        public int getTask_service_complete() {
+            return task_service_complete;
+        }
+
+        public void setTask_service_complete(int task_service_complete) {
+            this.task_service_complete = task_service_complete;
+        }
+
+        public int getReservation_record_view() {
+            return reservation_record_view;
+        }
+
+        public void setReservation_record_view(int reservation_record_view) {
+            this.reservation_record_view = reservation_record_view;
+        }
+
+        public int getReservation_subscribe_add() {
+            return reservation_subscribe_add;
+        }
+
+        public void setReservation_subscribe_add(int reservation_subscribe_add) {
+            this.reservation_subscribe_add = reservation_subscribe_add;
+        }
+
+        public int getReservation_change_add() {
+            return reservation_change_add;
+        }
+
+        public void setReservation_change_add(int reservation_change_add) {
+            this.reservation_change_add = reservation_change_add;
+        }
+
+        public int getReservation_unchange_add() {
+            return reservation_unchange_add;
+        }
+
+        public void setReservation_unchange_add(int reservation_unchange_add) {
+            this.reservation_unchange_add = reservation_unchange_add;
+        }
+
+        public int getAttachment_normal_upload() {
+            return attachment_normal_upload;
+        }
+
+        public void setAttachment_normal_upload(int attachment_normal_upload) {
+            this.attachment_normal_upload = attachment_normal_upload;
+        }
+
+        public int getAttachment_normal_delete() {
+            return attachment_normal_delete;
+        }
+
+        public void setAttachment_normal_delete(int attachment_normal_delete) {
+            this.attachment_normal_delete = attachment_normal_delete;
+        }
+
+        public int getAttachment_normal_view() {
+            return attachment_normal_view;
+        }
+
+        public void setAttachment_normal_view(int attachment_normal_view) {
+            this.attachment_normal_view = attachment_normal_view;
+        }
+
+        public int getAttachment_invoice_upload() {
+            return attachment_invoice_upload;
+        }
+
+        public void setAttachment_invoice_upload(int attachment_invoice_upload) {
+            this.attachment_invoice_upload = attachment_invoice_upload;
+        }
+    }
+
+    //工单具体信息
+    public static class OrderDetailBean extends TypeData implements Parcelable {
+        private String attach_count;
+        private String amount;
+        private String callback;
+        private String company_name;
+        private String contact_phone;
+        private String current_num;
+        private String current_task_code;
+        private String customer_address;
+        private String customer_baidu_location;
+        private String customer_email;
+        private String customer_level;
+        private String customer_name;
+        private String customer_tencent_location;
+        private String failure_description;
+        private String fault_description;
+        private String invited_review_result;
+        private String is_submit_questionnaire;
+        private String is_vip;
+        private String last_so_task_id;
+        private String n_order_id;
+        private String order_id;
+        private String order_state_id;
+        private String order_state_name;
+        private String order_type_id;
+        private String order_type_name;
+        private String p_order_id;
+        private String parts_status;
+        private String pre_time;
+        private String product_sn;
+        private String product_type;
+        private String questionnaire_url;
+        private String remark;
+        private int repair_times;
+        private String so_type;
+        private String service_name;
+        private String soid;
+        private String solution;
+        private String task_descriptions;
+        private String time1;
+        private String time4;
+        private ArrayList<Attachment> attachments;
+        private ArrayList<CustomPhone> customer_phones;
+
+        public OrderDetailBean() {
+        }
+
+        protected OrderDetailBean(Parcel in) {
+            attach_count = in.readString();
+            amount = in.readString();
+            callback = in.readString();
+            company_name = in.readString();
+            contact_phone = in.readString();
+            current_num = in.readString();
+            current_task_code = in.readString();
+            customer_address = in.readString();
+            customer_baidu_location = in.readString();
+            customer_email = in.readString();
+            customer_level = in.readString();
+            customer_name = in.readString();
+            customer_tencent_location = in.readString();
+            failure_description = in.readString();
+            fault_description = in.readString();
+            invited_review_result = in.readString();
+            is_submit_questionnaire = in.readString();
+            is_vip = in.readString();
+            last_so_task_id = in.readString();
+            n_order_id = in.readString();
+            order_id = in.readString();
+            order_state_id = in.readString();
+            order_state_name = in.readString();
+            order_type_id = in.readString();
+            order_type_name = in.readString();
+            p_order_id = in.readString();
+            parts_status = in.readString();
+            pre_time = in.readString();
+            product_sn = in.readString();
+            product_type = in.readString();
+            questionnaire_url = in.readString();
+            remark = in.readString();
+            repair_times = in.readInt();
+            so_type = in.readString();
+            service_name = in.readString();
+            soid = in.readString();
+            solution = in.readString();
+            task_descriptions = in.readString();
+            time1 = in.readString();
+            time4 = in.readString();
+        }
+
+        public static final Creator<OrderDetailBean> CREATOR = new Creator<OrderDetailBean>() {
+            @Override
+            public OrderDetailBean createFromParcel(Parcel in) {
+                return new OrderDetailBean(in);
+            }
+
+            @Override
+            public OrderDetailBean[] newArray(int size) {
+                return new OrderDetailBean[size];
+            }
+        };
+
+        public String getAttach_count() {
+            return attach_count;
+        }
+
+        public void setAttach_count(String attach_count) {
+            this.attach_count = attach_count;
+        }
+
+        public String getAmount() {
+            return amount;
+        }
+
+        public void setAmount(String amount) {
+            this.amount = amount;
+        }
+
+        public String getCallback() {
+            return callback;
+        }
+
+        public void setCallback(String callback) {
+            this.callback = callback;
+        }
+
+        public String getCompany_name() {
+            return company_name;
+        }
+
+        public void setCompany_name(String company_name) {
+            this.company_name = company_name;
+        }
+
+        public String getContact_phone() {
+            return contact_phone;
+        }
+
+        public void setContact_phone(String contact_phone) {
+            this.contact_phone = contact_phone;
+        }
+
+        public String getCurrent_num() {
+            return current_num;
+        }
+
+        public void setCurrent_num(String current_num) {
+            this.current_num = current_num;
+        }
+
+        public String getCurrent_task_code() {
+            return current_task_code;
+        }
+
+        public void setCurrent_task_code(String current_task_code) {
+            this.current_task_code = current_task_code;
+        }
+
+        public String getCustomer_address() {
+            return customer_address;
+        }
+
+        public void setCustomer_address(String customer_address) {
+            this.customer_address = customer_address;
+        }
+
+        public String getCustomer_baidu_location() {
+            return customer_baidu_location;
+        }
+
+        public void setCustomer_baidu_location(String customer_baidu_location) {
+            this.customer_baidu_location = customer_baidu_location;
+        }
+
+        public String getCustomer_email() {
+            return customer_email;
+        }
+
+        public void setCustomer_email(String customer_email) {
+            this.customer_email = customer_email;
+        }
+
+        public String getCustomer_level() {
+            return customer_level;
+        }
+
+        public void setCustomer_level(String customer_level) {
+            this.customer_level = customer_level;
+        }
+
+        public String getCustomer_name() {
+            return customer_name;
+        }
+
+        public void setCustomer_name(String customer_name) {
+            this.customer_name = customer_name;
+        }
+
+        public String getCustomer_tencent_location() {
+            return customer_tencent_location;
+        }
+
+        public void setCustomer_tencent_location(String customer_tencent_location) {
+            this.customer_tencent_location = customer_tencent_location;
+        }
+
+        public String getFailure_description() {
+            return failure_description;
+        }
+
+        public void setFailure_description(String failure_description) {
+            this.failure_description = failure_description;
+        }
+
+        public String getFault_description() {
+            return fault_description;
+        }
+
+        public void setFault_description(String fault_description) {
+            this.fault_description = fault_description;
+        }
+
+        public String getInvited_review_result() {
+            return invited_review_result;
+        }
+
+        public void setInvited_review_result(String invited_review_result) {
+            this.invited_review_result = invited_review_result;
+        }
+
+        public String getIs_submit_questionnaire() {
+            return is_submit_questionnaire;
+        }
+
+        public void setIs_submit_questionnaire(String is_submit_questionnaire) {
+            this.is_submit_questionnaire = is_submit_questionnaire;
+        }
+
+        public String getIs_vip() {
+            return is_vip;
+        }
+
+        public void setIs_vip(String is_vip) {
+            this.is_vip = is_vip;
+        }
+
+        public String getLast_so_task_id() {
+            return last_so_task_id;
+        }
+
+        public void setLast_so_task_id(String last_so_task_id) {
+            this.last_so_task_id = last_so_task_id;
+        }
+
+        public String getN_order_id() {
+            return n_order_id;
+        }
+
+        public void setN_order_id(String n_order_id) {
+            this.n_order_id = n_order_id;
+        }
+
+        public String getOrder_id() {
+            return order_id;
+        }
+
+        public void setOrder_id(String order_id) {
+            this.order_id = order_id;
+        }
+
+        public String getOrder_state_id() {
+            return order_state_id;
+        }
+
+        public void setOrder_state_id(String order_state_id) {
+            this.order_state_id = order_state_id;
+        }
+
+        public String getOrder_state_name() {
+            return order_state_name;
+        }
+
+        public void setOrder_state_name(String order_state_name) {
+            this.order_state_name = order_state_name;
+        }
+
+        public String getOrder_type_id() {
+            return order_type_id;
+        }
+
+        public void setOrder_type_id(String order_type_id) {
+            this.order_type_id = order_type_id;
+        }
+
+        public String getOrder_type_name() {
+            return order_type_name;
+        }
+
+        public void setOrder_type_name(String order_type_name) {
+            this.order_type_name = order_type_name;
+        }
+
+        public String getP_order_id() {
+            return p_order_id;
+        }
+
+        public void setP_order_id(String p_order_id) {
+            this.p_order_id = p_order_id;
+        }
+
+        public String getParts_status() {
+            return parts_status;
+        }
+
+        public void setParts_status(String parts_status) {
+            this.parts_status = parts_status;
+        }
+
+        public String getPre_time() {
+            return pre_time;
+        }
+
+        public void setPre_time(String pre_time) {
+            this.pre_time = pre_time;
+        }
+
+        public String getProduct_sn() {
+            return product_sn;
+        }
+
+        public void setProduct_sn(String product_sn) {
+            this.product_sn = product_sn;
+        }
+
+        public String getProduct_type() {
+            return product_type;
+        }
+
+        public void setProduct_type(String product_type) {
+            this.product_type = product_type;
+        }
+
+        public String getQuestionnaire_url() {
+            return questionnaire_url;
+        }
+
+        public void setQuestionnaire_url(String questionnaire_url) {
+            this.questionnaire_url = questionnaire_url;
+        }
+
+        public String getRemark() {
+            return remark;
+        }
+
+        public void setRemark(String remark) {
+            this.remark = remark;
+        }
+
+        public int getRepair_times() {
+            return repair_times;
+        }
+
+        public void setRepair_times(int repair_times) {
+            this.repair_times = repair_times;
+        }
+
+        public String getSo_type() {
+            return so_type;
+        }
+
+        public void setSo_type(String so_type) {
+            this.so_type = so_type;
+        }
+
+        public String getService_name() {
+            return service_name;
+        }
+
+        public void setService_name(String service_name) {
+            this.service_name = service_name;
+        }
+
+        public String getSoid() {
+            return soid;
+        }
+
+        public void setSoid(String soid) {
+            this.soid = soid;
+        }
+
+        public String getSolution() {
+            return solution;
+        }
+
+        public void setSolution(String solution) {
+            this.solution = solution;
+        }
+
+        public String getTask_descriptions() {
+            return task_descriptions;
+        }
+
+        public void setTask_descriptions(String task_descriptions) {
+            this.task_descriptions = task_descriptions;
+        }
+
+        public String getTime1() {
+            return time1;
+        }
+
+        public void setTime1(String time1) {
+            this.time1 = time1;
+        }
+
+        public String getTime4() {
+            return time4;
+        }
+
+        public void setTime4(String time4) {
+            this.time4 = time4;
+        }
+
+        public ArrayList<Attachment> getAttachments() {
+            return attachments;
+        }
+
+        public void setAttachments(ArrayList<Attachment> attachments) {
+            this.attachments = attachments;
+        }
+
+        public ArrayList<CustomPhone> getCustomer_phones() {
+            return customer_phones;
+        }
+
+        public void setCustomer_phones(ArrayList<CustomPhone> customer_phones) {
+            this.customer_phones = customer_phones;
+        }
+
+        @Override
+        public int getType() {
+            return 0;
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(attach_count);
+            dest.writeString(amount);
+            dest.writeString(callback);
+            dest.writeString(company_name);
+            dest.writeString(contact_phone);
+            dest.writeString(current_num);
+            dest.writeString(current_task_code);
+            dest.writeString(customer_address);
+            dest.writeString(customer_baidu_location);
+            dest.writeString(customer_email);
+            dest.writeString(customer_level);
+            dest.writeString(customer_name);
+            dest.writeString(customer_tencent_location);
+            dest.writeString(failure_description);
+            dest.writeString(fault_description);
+            dest.writeString(invited_review_result);
+            dest.writeString(is_submit_questionnaire);
+            dest.writeString(is_vip);
+            dest.writeString(last_so_task_id);
+            dest.writeString(n_order_id);
+            dest.writeString(order_id);
+            dest.writeString(order_state_id);
+            dest.writeString(order_state_name);
+            dest.writeString(order_type_id);
+            dest.writeString(order_type_name);
+            dest.writeString(p_order_id);
+            dest.writeString(parts_status);
+            dest.writeString(pre_time);
+            dest.writeString(product_sn);
+            dest.writeString(product_type);
+            dest.writeString(questionnaire_url);
+            dest.writeString(remark);
+            dest.writeInt(repair_times);
+            dest.writeString(so_type);
+            dest.writeString(service_name);
+            dest.writeString(soid);
+            dest.writeString(solution);
+            dest.writeString(task_descriptions);
+            dest.writeString(time1);
+            dest.writeString(time4);
+        }
+    }
+
+    public class Attachment {
+        private String file_id;
+        private String name;
+        private String type;
+
+        public String getFile_id() {
+            return file_id;
+        }
+
+        public void setFile_id(String file_id) {
+            this.file_id = file_id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+    }
+
+    public class CustomPhone {
+        private String phone;
+        private String type;
+
+        public String getPhone() {
+            return phone;
+        }
+
+        public void setPhone(String phone) {
+            this.phone = phone;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+    }
+
+    public class BackupPiece {
+        private long bid;
+        private String branch_id;
+        private String create_by;
+        private String create_time;
+        private String user_code;
+        private String mark_status;
+        private String material_class_name;
+        private String material_name;
+        private String material_no;
+        private String pr_code;
+        private String pr_status;
+        private String soid;
+        private String spsn;
+        private String store_area_name;
+        private String yakuan_price;
+
+        public long getBid() {
+            return bid;
+        }
+
+        public void setBid(long bid) {
+            this.bid = bid;
+        }
+
+        public String getBranch_id() {
+            return branch_id;
+        }
+
+        public void setBranch_id(String branch_id) {
+            this.branch_id = branch_id;
+        }
+
+        public String getCreate_by() {
+            return create_by;
+        }
+
+        public void setCreate_by(String create_by) {
+            this.create_by = create_by;
+        }
+
+        public String getCreate_time() {
+            return create_time;
+        }
+
+        public void setCreate_time(String create_time) {
+            this.create_time = create_time;
+        }
+
+        public String getUser_code() {
+            return user_code;
+        }
+
+        public void setUser_code(String user_code) {
+            this.user_code = user_code;
+        }
+
+        public String getMark_status() {
+            return mark_status;
+        }
+
+        public void setMark_status(String mark_status) {
+            this.mark_status = mark_status;
+        }
+
+        public String getMaterial_class_name() {
+            return material_class_name;
+        }
+
+        public void setMaterial_class_name(String material_class_name) {
+            this.material_class_name = material_class_name;
+        }
+
+        public String getMaterial_name() {
+            return material_name;
+        }
+
+        public void setMaterial_name(String material_name) {
+            this.material_name = material_name;
+        }
+
+        public String getMaterial_no() {
+            return material_no;
+        }
+
+        public void setMaterial_no(String material_no) {
+            this.material_no = material_no;
+        }
+
+        public String getPr_code() {
+            return pr_code;
+        }
+
+        public void setPr_code(String pr_code) {
+            this.pr_code = pr_code;
+        }
+
+        public String getPr_status() {
+            return pr_status;
+        }
+
+        public void setPr_status(String pr_status) {
+            this.pr_status = pr_status;
+        }
+
+        public String getSoid() {
+            return soid;
+        }
+
+        public void setSoid(String soid) {
+            this.soid = soid;
+        }
+
+        public String getSpsn() {
+            return spsn;
+        }
+
+        public void setSpsn(String spsn) {
+            this.spsn = spsn;
+        }
+
+        public String getStore_area_name() {
+            return store_area_name;
+        }
+
+        public void setStore_area_name(String store_area_name) {
+            this.store_area_name = store_area_name;
+        }
+
+        public String getYakuan_price() {
+            return yakuan_price;
+        }
+
+        public void setYakuan_price(String yakuan_price) {
+            this.yakuan_price = yakuan_price;
+        }
+    }
+
+}

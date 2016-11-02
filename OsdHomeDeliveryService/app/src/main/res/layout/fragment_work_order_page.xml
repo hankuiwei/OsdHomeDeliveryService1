@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.lenovo.csd.eservice.widget.RefreshHeaderView
+            android:id="@+id/swipe_refresh_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+<!--
+            android:clickable="true"
+            android:addStatesFromChildren="true"
+            android:foreground="?attr/selectableItemBackground"
+-->
+        <com.lenovo.csd.eservice.widget.LoadMoreFooterView
+            android:id="@+id/swipe_load_more_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp" />
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+    <LinearLayout
+        android:id="@+id/ordersBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/layout_200dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="@dimen/layout_49dp"
+            android:layout_height="@dimen/layout_40dp"
+            android:src="@drawable/icon_orders_box"
+            android:layout_gravity="center"
+            android:contentDescription="@string/mine_name"
+            />
+        <TextView
+            android:id="@+id/ordersLebel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_15dp"
+            android:text="@string/orders_unfinished_middle_label"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+</LinearLayout>

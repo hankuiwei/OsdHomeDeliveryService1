@@ -1,0 +1,222 @@
+package com.lenovo.csd.eservice.entity.base;
+
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+/**
+ * Created by 彤 on 2016/8/19.
+ */
+public class MachineInfoData extends BaseData {
+    private MachineDataArray data;
+
+    public void setData(MachineDataArray data) {
+        this.data = data;
+    }
+
+    public MachineDataArray getData() {
+        return data;
+    }
+
+    public class MachineDataArray {
+        private MachineData machine_info;
+        private ArrayList<WarrantyData> warranty_info;
+
+        public MachineData getMachine_info() {
+            return machine_info;
+        }
+
+        public void setMachine_info(MachineData machine_info) {
+            this.machine_info = machine_info;
+        }
+
+        public ArrayList<WarrantyData> getWarranty_info() {
+            return warranty_info;
+        }
+
+        public void setWarranty_info(ArrayList<WarrantyData> warranty_info) {
+            this.warranty_info = warranty_info;
+        }
+    }
+
+    public class MachineData extends TypeData {
+        private String product_no;
+        private String material_no;
+        private String machine_name;
+        private String product_date;
+        private String scan_date;
+        private String buy_date;
+        private String part_end_date;
+        private String on_site_end_date;
+
+        public String getProduct_no() {
+            return product_no;
+        }
+
+        public void setProduct_no(String product_no) {
+            this.product_no = product_no;
+        }
+
+        public String getMaterial_no() {
+            return material_no;
+        }
+
+        public void setMaterial_no(String material_no) {
+            this.material_no = material_no;
+        }
+
+        public String getMachine_name() {
+            return machine_name;
+        }
+
+        public void setMachine_name(String machine_name) {
+            this.machine_name = machine_name;
+        }
+
+        public String getProduct_date() {
+            return product_date;
+        }
+
+        public void setProduct_date(String product_date) {
+            this.product_date = product_date;
+        }
+
+        public String getScan_date() {
+            return scan_date;
+        }
+
+        public void setScan_date(String scan_date) {
+            this.scan_date = scan_date;
+        }
+
+        public String getBuy_date() {
+            return buy_date;
+        }
+
+        public void setBuy_date(String buy_date) {
+            this.buy_date = buy_date;
+        }
+
+        public String getPart_end_date() {
+            return part_end_date;
+        }
+
+        public void setPart_end_date(String part_end_date) {
+            this.part_end_date = part_end_date;
+        }
+
+        public String getOn_site_end_date() {
+            return on_site_end_date;
+        }
+
+        public void setOn_site_end_date(String on_site_end_date) {
+            this.on_site_end_date = on_site_end_date;
+        }
+
+        @Override
+        public int getType() {
+            return 0;
+        }
+    }
+
+    public class WarrantyData extends TypeData {
+        private String warranty_name;
+        private String warranty_description;
+        private String labor_start_date;
+        private String labor_end_date;
+        private String on_site_start_date;
+        private String on_site_end_date;
+        private String part_start_date;
+        private String part_end_date;
+
+        public String getWarranty_name() {
+            return warranty_name;
+        }
+
+        public void setWarranty_name(String warranty_name) {
+            this.warranty_name = warranty_name;
+        }
+
+        public String getWarranty_description() {
+            return warranty_description;
+        }
+
+        public void setWarranty_description(String warranty_description) {
+            this.warranty_description = warranty_description;
+        }
+
+        public String getLabor_start_date() {
+            return labor_start_date;
+        }
+
+        public void setLabor_start_date(String labor_start_date) {
+            this.labor_start_date = labor_start_date;
+        }
+
+        public String getLabor_end_date() {
+            return labor_end_date;
+        }
+
+        public void setLabor_end_date(String labor_end_date) {
+            this.labor_end_date = labor_end_date;
+        }
+
+        public String getOn_site_start_date() {
+            return on_site_start_date;
+        }
+
+        public void setOn_site_start_date(String on_site_start_date) {
+            this.on_site_start_date = on_site_start_date;
+        }
+
+        public String getOn_site_end_date() {
+            return on_site_end_date;
+        }
+
+        public void setOn_site_end_date(String on_site_end_date) {
+            this.on_site_end_date = on_site_end_date;
+        }
+
+        public String getPart_start_date() {
+            return part_start_date;
+        }
+
+        public void setPart_start_date(String part_start_date) {
+            this.part_start_date = part_start_date;
+        }
+
+        public String getPart_end_date() {
+            return part_end_date;
+        }
+
+        public void setPart_end_date(String part_end_date) {
+            this.part_end_date = part_end_date;
+        }
+
+        @Override
+        public int getType() {
+            return 2;
+        }
+    }
+
+    public class TitleData extends TypeData {
+        private String mTitle;
+
+        public TitleData(String title) {
+            this.mTitle = title;
+        }
+
+        public String getmTitle() {
+            return mTitle;
+        }
+
+        @Override
+        public int getType() {
+            return 1;
+        }
+    }
+
+    public abstract class TypeData {
+        public abstract int getType();
+    }
+}

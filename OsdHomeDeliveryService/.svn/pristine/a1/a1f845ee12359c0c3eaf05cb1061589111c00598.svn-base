@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black_373b3e"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.lenovo.csd.eservice.activity.MoreAboutCustomActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_373b3e">
+
+        <RelativeLayout
+            android:id="@+id/relative_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_bg_draweritem"
+            android:gravity="center"
+            android:paddingBottom="@dimen/layout_25dp"
+            android:paddingLeft="@dimen/layout_25dp"
+            android:paddingRight="@dimen/layout_25dp"
+            android:paddingTop="@dimen/layout_15dp">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/layout_15dp"
+                android:layout_height="@dimen/layout_25dp"
+                android:background="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_13dp"
+                android:layout_toRightOf="@id/img_back"
+                android:text="@string/text_customer_moreinfo"
+                android:textColor="@color/white_ffffff"
+                android:textSize="@dimen/text_24sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_ffffff"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/layout_25dp"
+        android:paddingRight="@dimen/layout_25dp"
+        android:paddingTop="@dimen/layout_30dp">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_cccccc"
+            android:orientation="vertical">
+
+            <TableRow
+                android:id="@+id/tableRowName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/gray_F8F8F8"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/layout_13dp"
+                    android:layout_marginTop="@dimen/layout_13dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/orders_Customer_name_label"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_15sp" />
+
+                <LinearLayout
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_cccccc" />
+
+                <TextView
+                    android:id="@+id/text_consumerName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/layout_13dp"
+                    android:layout_marginLeft="@dimen/layout_10dp"
+                    android:layout_marginStart="@dimen/layout_10dp"
+                    android:layout_marginTop="@dimen/layout_13dp"
+                    android:layout_weight="3"
+                    android:text="@string/orders_Customer_name"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_15sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowTel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/layout_13dp"
+                    android:layout_marginTop="@dimen/layout_13dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/orders_Customer_phone_label"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_15sp" />
+
+                <LinearLayout
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_cccccc" />
+
+                <LinearLayout
+                    android:id="@+id/linearPhones"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_10dp"
+                    android:layout_marginStart="@dimen/layout_10dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/layout_15dp"
+                    android:paddingRight="@dimen/layout_15dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/gray_F8F8F8"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/layout_13dp"
+                    android:paddingTop="@dimen/layout_13dp"
+                    android:text="@string/orders_Customer_address_label"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/text_15sp" />
+
+                <LinearLayout
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_cccccc" />
+
+                <LinearLayout
+                    android:id="@+id/linear_customerAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_10dp"
+                    android:layout_marginStart="@dimen/layout_10dp"
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/layout_13dp"
+                    android:paddingTop="@dimen/layout_13dp">
+
+
+                    <TextView
+                        android:id="@+id/text_consumerAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="7"
+                        android:text="@string/orders_Customer_address"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/text_15sp" />
+
+                    <ImageView
+                        android:id="@+id/imgNavigation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginEnd="@dimen/layout_15dp"
+                        android:layout_marginRight="@dimen/layout_15dp"
+                        android:layout_toEndOf="@id/text_consumerAddress"
+                        android:layout_toRightOf="@id/text_consumerAddress"
+                        android:layout_weight="0.5"
+                        android:contentDescription="@string/mine_name"
+                        android:src="@drawable/icon_orders_unfinished_navigation" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/layout_13dp"
+                    android:paddingTop="@dimen/layout_13dp"
+                    android:text="@string/text_customer_level"
+                    android:textColor="@color/gray_666666"
+                    android:textSize="@dimen/text_15sp" />
+
+                <LinearLayout
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_cccccc" />
+
+                <TextView
+                    android:id="@+id/text_consumerLevel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_10dp"
+                    android:layout_marginStart="@dimen/layout_10dp"
+                    android:layout_weight="3"
+                    android:paddingBottom="@dimen/layout_13dp"
+                    android:paddingTop="@dimen/layout_13dp"
+                    android:text="@string/orders_Customer_machine"
+                    android:textColor="@color/gray_666666"
+                    android:textSize="@dimen/text_15sp" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_30dp"
+            android:text="@string/text_contact_records"
+            android:textColor="@color/gray_666666"
+            android:textSize="@dimen/text_23sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_contactRecords"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>
